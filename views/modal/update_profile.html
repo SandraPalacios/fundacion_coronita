@@ -1,0 +1,28 @@
+<div class="title-blue">
+    Carga tu foto de perfil
+</div>
+<form action="#" class="fileform">
+    <input type="hidden" id="flag" class="form-control" value="{{flag}}">
+    <div class="step-container">
+        <div class="grid-container empty" id="filecontainer">
+            <div class="grid-item dragndrop" id="profile-image">
+                <img src="./images/microilustrations/Micro-adjuntar.png" alt=" ">
+                <div class="message">
+                    Arrastra y suelta tu foto de perfil aqu&iacute; o click para seleccionarla
+                    <div class="submessage">
+                        Solo se permite 1 archivo, formatos permitidos: JPG y PNG<br>
+                        Peso m&aacute;ximo 12MB
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div id="file-preview-wrapper"></div>
+                <div class="submtbtn" id="sbtmfiles" style="display: none">
+                    <span title="Guardar" aria-label="Guardar" class="btn__basic btn__submit" id="btn_save_image">
+                        <span aria-hidden="true">Guardar</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

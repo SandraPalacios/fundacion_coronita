@@ -1,0 +1,73 @@
+html {
+  min-height: 100%;
+  width: 100vw;
+  max-width: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-family: "BentonSansBBVA-Book", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #121212;
+  text-align: left;
+  letter-spacing: 0;
+  line-height: 20px
+}
+
+div {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 1200px) {
+    width: 1176px;
+  }
+
+  @media (max-width: 1200px) and (min-width: 992px) {
+    width: 960px;
+  }
+
+  &.content {
+    @media (max-width: 992px) and (min-width: 0) {
+      padding: 10px;
+    }
+  }
+}
+
+.card {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  font-family: "BentonSansBBVA-Book", Helvetica, Arial, sans-serif;
+  color: $bbva-600;
+  background-color: $bbva-white;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 1px;
+  padding: 1rem 1.25rem 0;
+
+  &.accordeon{
+    padding: 0 1.25rem 1.25rem;
+  }
+  @include to(m){
+    padding: 0px;
+  }
+  &.gray{
+    background-color: $bbva-100;
+  }
+}
+
+.txt_ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

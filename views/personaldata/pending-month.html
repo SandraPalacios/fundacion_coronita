@@ -1,0 +1,45 @@
+<div class="subtitle-sec">Confirmaci&oacute;n de dep&oacute;sitos pendientes</div>
+<div class="grid-container">
+    {{#pendingsM}}
+    <form name="{{monthConfirm}}-{{yearConfirm}}" action="#" class="form-gray" method="post" target="_top" id="{{monthConfirm}}-{{yearConfirm}}">
+        <div class="grid-item">
+            <div class="cards deposits">
+                <div class="cards-content">
+                    <div class="title-b">
+                        {{monthConfirm}} {{yearConfirm}}
+                    </div>
+                    <div class="separator-div"></div>
+                    <div class="radio-section radios-three required" id="confirmDep">
+                        <div class="radio-buttons">
+                            <div class="radio-button">
+                                <div class="ckeck-area">
+                                    <div class="radio" data-id="{{monthConfirm}}_{{yearConfirm}}"></div>
+                                </div>
+                                <div class="radio-label">S&iacute;</div>
+                            </div>
+                            <div class="radio-button">
+                                <div class="ckeck-area">
+                                    <div class="radio" data-id="{{monthConfirm}}_{{yearConfirm}}"></div>
+                                </div>
+                                <div class="radio-label">No</div>
+                            </div>
+                            <div class="radio-button">
+                                <div class="ckeck-area">
+                                    <div class="radio" data-id="{{monthConfirm}}_{{yearConfirm}}"></div>
+                                </div>
+                                <div class="radio-label">Incompleta</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="submtbtn sub_cards_master">
+                        <span title="Continuar" aria-label="Continuar" class="btn__basic btn__submit btn__cards-small btn_confirm_dep"
+                            id="btn_{{monthConfirm}}_{{yearConfirm}}">
+                            <span aria-hidden="true">Confirmar</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    {{/pendingsM}}
+</div>

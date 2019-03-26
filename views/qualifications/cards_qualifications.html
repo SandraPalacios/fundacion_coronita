@@ -1,0 +1,109 @@
+<form>
+    <div class="cards qualif {{cards_after}}">
+        <div class="cards-content">
+            <div class="grid-item title-b">
+                {{schoolarGrade}}
+            </div>
+            <div class="separator-div"></div>
+            <div class="grid-constancy tHead">
+                <div class="constancy">
+                    Constancia de estudios o de inscripci&oacute;n
+                </div>
+                <div class="uploadfile empty openuploadfile" id="upConstanciaempty{{indexC}}" style="display: {{emptyConst}}">
+                    <div class="wrapper">
+                        <div class="message message_cards const">
+                            <span class="message__body">
+                                <span><i class="bbva-icon ui-filled-up"></i>{{text4}}</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="uploadfile" id="upConstancia{{indexC}}" style="display: {{const}}">
+                    <div class="wrapper">
+                        <div class="message message_cards const">
+                            <span class="message__body">
+                                <span class="show" data-folio="{{constFolio}}"><i class="ui-show"></i>{{text1}}</span>
+                                <span class="replace openuploadfile"><i class="ui-edit"></i>{{text2}}</span>
+                                <span class="remove btn-delete-file" data-file="constancia" data-ind-constancia="{{indexC}}"><i
+                                        class="ui-trash"></i>{{text3}}</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="grid-qualifications tHead">
+                    <div class="grid-item">
+                        <label>PERIODO</label>
+                    </div>
+                    <div class="grid-item">
+                        <label>PROMEDIO</label>
+                    </div>
+                    <div class="grid-item">
+                        <label>BOLETA</label>
+                    </div>
+                </div>
+                {{#scholarLevelGrade}}
+                <div class="grid-qualifications tBody">
+                    <div class="grid-item">
+                        <label>{{schoolPeriod}}</label>
+                    </div>
+                    <div class="grid-item">
+                        <div class="form-validation-group">
+                            <div class="form-group">
+                                <input class="form-control decimals e-tooltip-f" name="score{{index}}" id="score{{index}}"
+                                    type="text" data-placeholder="Calificaci&oacute;n" data-grade="{{schoolGrade}}"
+                                    data-period="{{schoolPeriod}}" value="{{qualification}}" data-iscore="{{qualification}}"
+                                    data-helpsoce="#helpScore{{index}}" data-boletaid="#boletaSec-{{index}}" data-regex="PROM"
+                                    data-tooltitle="La calificaci&oacute;n debe ser en una escala del 1 al 10 y puede tener hasta 2 decimales"
+                                    required autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="uploadfile empty openuploadfile" id="upboletaempty{{indexB}}" style="display: {{emptyBoleta}}">
+                            <div class="wrapper">
+                                <div class="message message_cards">
+                                    <span class="message__body">
+                                        <span><i class="bbva-icon ui-filled-up"></i>{{text4}}</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uploadfile" id="upboleta{{indexB}}" style="display: {{boleta}}">
+                            <div class="wrapper">
+                                <div class="message message_cards">
+                                    <span class="message__body">
+                                        <span class="show" data-folio="{{folio}}"><i class="ui-show"></i>{{text1}}</span>
+                                        <span class="replace openuploadfile"><i class="ui-edit"></i>{{text2}}</span>
+                                        <span class="remove btn-delete-file" data-file="boleta" data-ind-boleta="{{indexB}}"><i
+                                                class="ui-trash"></i>{{text3}}</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/scholarLevelGrade}}
+            </div>
+            <div class="grid-qualifications tBody" style="display:{{showAverage}}">
+                <div class="grid-item">
+                    <label>Promedio General</label>
+                </div>
+                <div class="grid-item">
+                    <label>{{scholaraverageGrade}}</label>
+                </div>
+            </div>
+            <div class="card-block">
+                <div class="actionsection cards_master">
+                    <div class="submtbtn sub_cards_master">
+                        <span title="Continuar" aria-label="Continuar" class="btn__basic btn__submit btn__cards-small"
+                            id="">
+                            <span aria-hidden="true">Guardar</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

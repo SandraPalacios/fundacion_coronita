@@ -1,0 +1,19 @@
+<div class="subtitle-sec">Detalle de dep&oacute;sitos</div>
+<div class="all-table">
+    <div class="grid-table header-t">
+        <div>MES</div>
+        <div>DEP&Oacute;SITO</div>
+        <div>ESTATUS DE CONFIRMACI&Oacute;N</div>
+        <div>RESPUESTA FUNDACI&Oacute;N BANCOMER</div>
+    </div>
+    <div class="content-table">
+        {{#confirmsM}}
+        <div class="grid-table content-t">
+            <div>{{monthConfirm}} {{yearConfirm}}</div>
+            <div class="{{flag}}">{{deposit}}</div>
+            <div>{{statusReview}}</div>
+            <div>{{staffAnswer}}</div>
+        </div>
+        {{/confirmsM}}
+    </div>
+</div>

@@ -1,0 +1,128 @@
+<form name="form" action="#" class="form-gray notify-on-error" method="post" target="_top" id="formpersonaldata">
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="grid-container-s">
+                <div class="grid-item">
+                    Nombre(s): <span class="label-val"> {{scholarName}}</span>
+                </div>
+                <div class="grid-item">
+                    Apellido paterno: <span class="label-val"> {{lastName}}</span>
+                </div>
+                <div class="grid-item">
+                    Apellido materno: <span class="label-val"> {{secondLastName}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-container-s">
+                <div class="grid-item">
+                    Edad: <span class="label-val"> {{age}}</span>
+                </div>
+                <div class="grid-item">
+                    CR Asignado: <span class="label-val"> {{cr}}</span>
+                </div>
+                <div class="grid-item">
+                    N&uacute;mero de cuenta: <span class="label-val"> {{accountNumber}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="grid-container-s">
+                <div class="grid-item">
+                    <div class="label">
+                        <label>Fecha de nacimiento</label>
+                    </div>
+                    <div class="grid-item-t">
+                        <div class="grid-item">
+                            <div class="form-group-select whitwait required" id="dbirthdate">
+                                <div class="option-select">
+                                    <div class="select-title sl">
+                                        <span class="option-text sl center">D&iacute;a</span>
+                                        <span class="selected-option sl"></span>
+                                        <i class="bbva-icon ui-simple-down sl"></i>
+                                    </div>
+                                    <div class="list-result"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="form-group-select whitwait required" id="mbirthdate">
+                                <div class="option-select">
+                                    <div class="select-title sl">
+                                        <span class="option-text sl center">Mes</span>
+                                        <span class="selected-option sl"></span>
+                                        <i class="bbva-icon ui-simple-down sl"></i>
+                                    </div>
+                                    <div class="list-result"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="form-validation-group">
+                                <div class="form-group">
+                                    <input class="form-control numbers e-tooltip-f" name="ybirthdate" id="ybirthdate"
+                                        type="text" data-placeholder="A&ntilde;o" required autocomplete="off" maxlength="4"
+                                        data-regex="YEAR_80_ACT" data-tooltitle="Por ejemplo 2000" value="{{yearb}}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="form-validation-group">
+                        <div class="form-group">
+                            <input class="form-control uppercase alphanumeric" name="curp" id="curp" type="text"
+                                data-placeholder="CURP" required autocomplete="off" maxlength="18" data-regex="CURP"
+                                value="{{curp}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="query_curp">
+                        <span title="Consulta tu CURP haciendo click aqu&iacute;" aria-label="Consulta tu CURP haciendo click aqu&iacute;"
+                            class="btn__basic btn__clearbg">
+                            <i class="bbva-icon ui-info"></i>
+                            <span aria-hidden="true">Consulta tu CURP aqu&iacute;</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-container-s">
+                <div class="grid-item">
+                    <div class="label">
+                        <label>Sexo</label>
+                    </div>
+                    <div class="radio-section binary required" id="gender">
+                        <div class="form-validation-group">
+                            <div class="form-group">
+                                <div class="radio-buttons ">
+                                    <div class="radio-button">
+                                        <div class="ckeck-area">
+                                            <div class="radio" data-id="male"></div>
+                                        </div>
+                                        <div class="radio-label">Hombre</div>
+                                    </div>
+                                    <div class="radio-button">
+                                        <div class="ckeck-area">
+                                            <div class="radio" data-id="female"></div>
+                                        </div>
+                                        <div class="radio-label">Mujer</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="submtbtn actionsection t-right">
+        <span title="Continuar" aria-label="Continuar" class="btn__basic btn__submit" id="btn_savepersonald">
+            <span aria-hidden="true">Guardar</span>
+        </span>
+    </div>
+</form>

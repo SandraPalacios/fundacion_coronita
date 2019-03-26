@@ -1,0 +1,94 @@
+<form name="contactdata" action="#" class="form-gray notify-on-error" method="post" target="_top" id="formldata">
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="form-validation-group">
+                <div class="form-group">
+                    <input class="form-control phonenumber e-tooltip-f no-repeat" name="phone" id="phone" maxlength="14"
+                        type="text" data-placeholder="Tel&eacute;fono de casa" required autocomplete="off" value="{{homePhone}}"
+                        data-tooltitle="Si no tienes tel&eacute;fono de casa, puedes agregar cualquier otro n&uacute;mero telef&oacute;nico ya sea de casa o de celular.">
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="form-validation-group">
+                <div class="form-group">
+                    <input class="form-control phonenumber e-tooltip-f no-repeat" name="cellphone" id="cellphone"
+                        maxlength="14" type="text" data-placeholder="Tel&eacute;fono celular" required autocomplete="off"
+                        value="{{cellPhone}}" data-tooltitle="Si no tienes tel&eacute;fono de celular, puedes agregar cualquier otro n&uacute;mero telef&oacute;nico ya sea de casa o de celular.">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="form-validation-group">
+                <div class="form-group">
+                    <input class="form-control phonenumber e-tooltip-f no-repeat" name="errandsphone" id="errandsphone"
+                        maxlength="14" type="text" data-placeholder="Tel&eacute;fono para recados" required
+                        autocomplete="off" value="{{messagePhone}}" data-tooltitle="Si no tienes tel&eacute;fono para recados, puedes agregar cualquier otro n&uacute;mero telef&oacute;nico ya sea de casa o de celular.">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="form-validation-group">
+                <div class="form-group">
+                    <input class="form-control" name="email" id="email" type="text" data-placeholder="Correo electr&oacute;nico principal"
+                        required autocomplete="off" data-regex="EMAIL" value="{{email}}">
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="form-validation-group">
+                <div class="form-group">
+                    <input class="form-control" name="email" id="emailconf" type="text" data-placeholder="Confirma tu correo principal"
+                        required autocomplete="off" data-regex="EMAIL" data-confirm="#email" oncopy="return false"
+                        onpaste="return false" oncut="return false" value="{{email}}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="form-validation-group">
+                <div class="form-group">
+                    <input class="form-control" name="email" id="email2" type="text" data-placeholder="Correo electr&oacute;nico adicional 1 (opcional)"
+                        autocomplete="off" data-regex="EMAIL" value="{{email1}}">
+                </div>
+            </div>
+        </div>
+        <div class="grid-item" style="display:none">
+            <div class="form-validation-group">
+                <div class="form-group">
+                    <input class="form-control" name="email" id="email2conf" type="text" data-placeholder="Confirmar el correo adicional 1"
+                        autocomplete="off" data-regex="EMAIL" data-confirm="#email2" oncut="return false" oncopy="return false"
+                        onpaste="return false" value="{{email1}}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="form-validation-group">
+                <div class="form-group">
+                    <input class="form-control" name="email" id="email3" type="text" data-placeholder="Correo electr&oacute;nico adicional 2(opcional)"
+                        autocomplete="off" data-regex="EMAIL" value="{{email2}}">
+                </div>
+            </div>
+        </div>
+        <div class="grid-item" style="display:none">
+            <div class="form-validation-group">
+                <div class="form-group">
+                    <input class="form-control" name="email" id="email3conf" type="text" data-placeholder="Confirma el correo adicional 2"
+                        autocomplete="off" data-regex="EMAIL" data-confirm="#email3" value="{{email2}}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="submtbtn t-right">
+        <span title="Continuar" aria-label="Continuar" class="btn__basic btn__submit" id="btn_savecontactd">
+            <span aria-hidden="true">Guardar</span>
+        </span>
+    </div>
+</form>

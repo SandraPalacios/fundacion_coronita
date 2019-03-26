@@ -1,0 +1,64 @@
+<div class="cards qualif">
+    <div class="cards-content">
+        <div class="grid-item title-b">
+            {{schoolarGrade}}
+        </div>
+        <div class="separator-div"></div>
+        <div class="grid-constancy tHead">
+            <div class="constancy">
+                Constancia de estudios o de inscripci&oacute;n
+            </div>
+            <div class="uploadfile" id="upConstancia{{indexC}}" style="display: {{const}}">
+                <div class="wrapper">
+                    <div class="message message_cards const">
+                        <span class="message__body">
+                            <span class="show" data-folio="{{constFolio}}"><i class="ui-show"></i>{{text1}}</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="grid-qualifications tHead">
+                <div class="grid-item">
+                    <label>PERIODO</label>
+                </div>
+                <div class="grid-item">
+                    <label>PROMEDIO</label>
+                </div>
+                <div class="grid-item">
+                    <label>BOLETA</label>
+                </div>
+            </div>
+            {{#scholarLevelGrade}}
+            <div class="grid-qualifications tBody">
+                <div class="grid-item">
+                    <label>{{schoolPeriod}}</label>
+                </div>
+                <div class="grid-item">
+                    <label>{{qualification}}</label>
+                </div>
+                <div class="grid-item">
+                    <div class="uploadfile" id="upboleta{{indexB}}" style="display: {{boleta}}">
+                        <div class="wrapper">
+                            <div class="message message_cards">
+                                <span class="message__body">
+                                    <span class="show" data-folio="{{folio}}"><i class="ui-show"></i>{{text1}}</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/scholarLevelGrade}}
+        </div>
+        <div class="grid-qualifications tBody" style="display:{{showAverage}}">
+            <div class="grid-item">
+                <label>Promedio General</label>
+            </div>
+            <div class="grid-item">
+                <label>{{scholaraverageGrade}}</label>
+            </div>
+        </div>
+    </div>
+</div>

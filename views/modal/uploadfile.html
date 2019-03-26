@@ -1,0 +1,28 @@
+<div class="title-blue">
+    Carga de archivos
+</div>
+<form action="#" class="fileform">
+    <input type="hidden" id="flag" class="form-control" value="{{flag}}">
+    <div class="step-container">
+        <div class="grid-container empty" id="filecontainer">
+            <div class="grid-item dragndrop" id="dragndrop">
+                <img src="images/microilustrations/Micro-adjuntar.png" alt=" ">
+                <div class="message">
+                    Arrastra y suelta los archivos aqu&iacute; o click para seleccionar los archivos
+                    <div class="submessage">
+                        Solo se permite m&aacute;ximo 2 archivos, formatos permitidos: JPG, PNG y PDF <br>
+                        Peso m&aacute;ximo 12MB
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div id="file-preview-wrapper"></div>
+                <div class="submtbtn" id="sbtmfiles" style="display: none">
+                    <span title="Guardar documento" aria-label="Guardar documento" class="btn__basic btn__submit" id="btn_sbtmfiles">
+                        <span aria-hidden="true">Guardar documento</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

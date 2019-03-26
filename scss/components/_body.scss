@@ -1,0 +1,2274 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: "BentonSansBBVA-Book", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    text-align: left;
+    letter-spacing: 0;
+    line-height: 20px;
+    color: $bbva-600;
+    word-wrap: break-word;
+    position: relative;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+
+    @media (min-width: 992px) {
+        font-size: 15px;
+        line-height: 24px;
+    }
+}
+
+input:invalid {
+    box-shadow: none;
+}
+
+.page-container {
+    min-height: 100%;
+    position: relative;
+}
+
+#principalTemplate{
+    .content {
+        padding-top: 10px;
+        padding-bottom: 0px;
+    }    
+}
+
+.content {
+    background-color: $bbva-100;
+    padding-top: 10px;
+    padding-bottom: 180px; //for footer
+    background-size: cover;
+    @include to(m){
+        padding-bottom: 224px;
+    }
+    .container {
+        @media (max-width: 992px) and (min-width: 0) {
+            padding: 10px;
+        }
+    }
+}
+
+//center align
+.outer {
+    display: table;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//end center align
+
+//wait modal
+.waitmodal {
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 10;
+
+    .spinner *,
+    .spinner *:before,
+    .spinner *:after {
+        box-sizing: border-box;
+    }
+
+    .spinner {
+        box-sizing: border-box;
+        pointer-events: none;
+        display: flex;
+
+        figure {
+            margin: auto;
+            height: 3em;
+            width: 2.5em;
+            position: relative;
+
+            .stripe--item-1 {
+                background: #2a86ca;
+                top: 50%;
+                -webkit-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+            }
+
+            .stripe--item-1,
+            .stripe--item-3,
+            .stripe--item-5 {
+                height: 0.72em;
+            }
+
+            .stripe {
+                contain: layout style;
+                -webkit-transform-origin: top;
+                transform-origin: top;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                stroke: none;
+                -webkit-animation-duration: 2.8s;
+                animation-duration: 2.8s;
+                -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+                -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+                ;
+            }
+
+            .stripe--item-1 {
+                background: #2a86ca;
+                top: 50%;
+                -webkit-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+                ;
+            }
+
+            .stripe--item-2 {
+                -webkit-animation-name: st2;
+                animation-name: st2;
+                ;
+            }
+
+            .stripe--item-3 {
+                background: $bbva-core-blue;
+                -webkit-animation-name: st3;
+                animation-name: st3;
+                ;
+            }
+
+            .stripe--item-4 {
+                -webkit-animation-name: st4;
+                animation-name: st4;
+                ;
+            }
+
+            .stripe--item-5 {
+                background: $bbva-aqua;
+                -webkit-animation-name: st5;
+                animation-name: st5;
+                ;
+            }
+
+            @-webkit-keyframes st2 {
+                0% {
+                    -webkit-transform: translate(0, 3em);
+                    transform: translate(0, 3em);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                25% {
+                    -webkit-transform: translate(0, 0.66em);
+                    transform: translate(0, 0.66em);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                50% {
+                    -webkit-transform: translate(0, 3em);
+                    transform: translate(0, 3em);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                75% {
+                    -webkit-transform: translate(0, 1.8em);
+                    transform: translate(0, 1.8em);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                100% {
+                    -webkit-transform: translate(0, 3em);
+                    transform: translate(0, 3em);
+                }
+            }
+
+            @keyframes st2 {
+                0% {
+                    -webkit-transform: translate(0, 3em);
+                    transform: translate(0, 3em);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                25% {
+                    -webkit-transform: translate(0, 0.66em);
+                    transform: translate(0, 0.66em);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                50% {
+                    -webkit-transform: translate(0, 3em);
+                    transform: translate(0, 3em);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                75% {
+                    -webkit-transform: translate(0, 1.8em);
+                    transform: translate(0, 1.8em);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                100% {
+                    -webkit-transform: translate(0, 3em);
+                    transform: translate(0, 3em);
+                }
+            }
+
+            @-webkit-keyframes st3 {
+                0% {
+                    -webkit-transform: scale(1, 0.99742) translate(0, -100%);
+                    transform: scale(1, 0.99742) translate(0, -100%);
+                }
+
+                25% {
+                    -webkit-transform: scale(1, 0.99742) translate(0, -100%);
+                    transform: scale(1, 0.99742) translate(0, -100%);
+                }
+
+                50% {
+                    -webkit-transform: scale(1, 0.99742) translate(0, -100%);
+                    transform: scale(1, 0.99742) translate(0, -100%);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                75% {
+                    -webkit-transform: scale(1, 2.4) translate(0, -100%);
+                    transform: scale(1, 2.4) translate(0, -100%);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                100% {
+                    -webkit-transform: scale(1, 0.99742) translate(0, -100%);
+                    transform: scale(1, 0.99742) translate(0, -100%);
+                }
+            }
+
+            @keyframes st3 {
+                0% {
+                    -webkit-transform: scale(1, 0.99742) translate(0, -100%);
+                    transform: scale(1, 0.99742) translate(0, -100%);
+                }
+
+                25% {
+                    -webkit-transform: scale(1, 0.99742) translate(0, -100%);
+                    transform: scale(1, 0.99742) translate(0, -100%);
+                }
+
+                50% {
+                    -webkit-transform: scale(1, 0.99742) translate(0, -100%);
+                    transform: scale(1, 0.99742) translate(0, -100%);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                75% {
+                    -webkit-transform: scale(1, 2.4) translate(0, -100%);
+                    transform: scale(1, 2.4) translate(0, -100%);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                100% {
+                    -webkit-transform: scale(1, 0.99742) translate(0, -100%);
+                    transform: scale(1, 0.99742) translate(0, -100%);
+                }
+            }
+
+            @-webkit-keyframes st4 {
+                0% {
+                    -webkit-transform: translate(0, 0.374em);
+                    transform: translate(0, 0.374em);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                25% {
+                    -webkit-transform: translate(0, 2em);
+                    transform: translate(0, 2em);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                50% {
+                    -webkit-transform: translate(0, 0.374em);
+                    transform: translate(0, 0.374em);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                75% {
+                    -webkit-transform: translate(0, 2.626em);
+                    transform: translate(0, 2.626em);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                100% {
+                    -webkit-transform: translate(0, 0.3734em);
+                    transform: translate(0, 0.3734em);
+                }
+            }
+
+            @keyframes st4 {
+                0% {
+                    -webkit-transform: translate(0, 0.374em);
+                    transform: translate(0, 0.374em);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                25% {
+                    -webkit-transform: translate(0, 2em);
+                    transform: translate(0, 2em);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                50% {
+                    -webkit-transform: translate(0, 0.374em);
+                    transform: translate(0, 0.374em);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                75% {
+                    -webkit-transform: translate(0, 2.626em);
+                    transform: translate(0, 2.626em);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                100% {
+                    -webkit-transform: translate(0, 0.3734em);
+                    transform: translate(0, 0.3734em);
+                }
+            }
+
+            @-webkit-keyframes st5 {
+                0% {
+                    -webkit-transform: scale(1, 0.99742) translate(0%, -50%);
+                    transform: scale(1, 0.99742) translate(0%, -50%);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                25% {
+                    -webkit-transform: scale(1, 2.4) translate(0%, -50%);
+                    transform: scale(1, 2.4) translate(0%, -50%);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                50% {
+                    -webkit-transform: scale(1, 0.99742) translate(0%, -50%);
+                    transform: scale(1, 0.99742) translate(0%, -50%);
+                }
+
+                75% {
+                    -webkit-transform: scale(1, 0.99742) translate(0%, -50%);
+                    transform: scale(1, 0.99742) translate(0%, -50%);
+                }
+
+                100% {
+                    -webkit-transform: scale(1, 0.99742) translate(0%, -50%);
+                    transform: scale(1, 0.99742) translate(0%, -50%);
+                }
+            }
+
+            @keyframes st5 {
+                0% {
+                    -webkit-transform: scale(1, 0.99742) translate(0%, -50%);
+                    transform: scale(1, 0.99742) translate(0%, -50%);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                25% {
+                    -webkit-transform: scale(1, 2.4) translate(0%, -50%);
+                    transform: scale(1, 2.4) translate(0%, -50%);
+                    -webkit-animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                    animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                }
+
+                50% {
+                    -webkit-transform: scale(1, 0.99742) translate(0%, -50%);
+                    transform: scale(1, 0.99742) translate(0%, -50%);
+                }
+
+                75% {
+                    -webkit-transform: scale(1, 0.99742) translate(0%, -50%);
+                    transform: scale(1, 0.99742) translate(0%, -50%);
+                }
+
+                100% {
+                    -webkit-transform: scale(1, 0.99742) translate(0%, -50%);
+                    transform: scale(1, 0.99742) translate(0%, -50%);
+                }
+            }
+        }
+
+    }
+}
+
+/*notification message*/
+.notification {
+    font-family: "BentonSansBBVA-Book", Helvetica, Arial, sans-serif;
+    letter-spacing: 0;
+    color: $bbva-600;
+    background-color: $bbva-100;
+    font-size: 0.875rem;
+    line-height: 1.4285;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0.5em;
+    margin-bottom: 32px;
+
+    .wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        padding: 1.5rem;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        width: 100%;
+
+        @include to(m) {
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            padding: 1.25rem 1rem;
+        }
+
+        .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+
+            .bbva-icon {
+                content: "\eaa3";
+            }
+        }
+
+        .message {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding-left: 1.5rem;
+
+            @include to(m) {
+                -webkit-box-ordinal-group: 3;
+                -ms-flex-order: 2;
+                order: 2;
+                width: 100%;
+                padding-left: 0;
+                -ms-flex-preferred-size: 100%;
+                flex-basis: 100%;
+            }
+        }
+
+        .close-button {
+            height: 24px;
+            color: $bbva-medium-blue;
+            cursor: pointer;
+        }
+
+        .message__heading {
+            padding: 0.3125rem 0 0.75rem 0;
+            font-size: 1.125rem;
+
+            @include to(m) {
+                padding: 1rem 0 0.5rem 0;
+                font-size: 1.125rem;
+            }
+        }
+
+        .message__body {
+            padding-bottom: 0.5rem;
+        }
+    }
+
+    &.info {
+        background-color: $bbva-white-light-blue;
+
+        .icon {
+            color: $bbva-light-blue;
+
+            .bbva-icon:before {
+                content: "\e012";
+            }
+        }
+    }
+
+    &.error {
+        background-color: $bbva-white-coral;
+
+        .icon {
+            color: $bbva-dark-red;
+
+            .bbva-icon:before {
+                content: "\e08c";
+            }
+        }
+    }
+
+    &.success {
+        background-color: $bbva-white-green;
+
+        .icon {
+            color: $bbva-green;
+
+            .bbva-icon:before {
+                content: "\ea58";
+            }
+        }
+    }
+
+    *,
+    *:before,
+    *:after {
+        -webkit-box-sizing: inherit;
+        box-sizing: inherit;
+    }
+}
+
+//end wait modal
+.form-group,
+.form-group-select {
+    .i-message {
+        height: 32px;
+        max-height: 32px !important;
+    }
+
+    &.hasError {
+        .bbva-icon {
+            font-size: 16px;
+            color: $bbva-dark-red;
+            float: left;
+        }
+
+        .text-message {
+            font-size: 12px;
+            vertical-align: sub;
+        }
+    }
+}
+
+.grid-item-t {
+    .grid-item {
+        .form-group,
+        .form-group-select {
+            &.hasError {
+                .i-message {
+                    line-height: 6px;
+                    padding-top: 3px;
+                    height: 29px;
+                }
+            }
+        }
+    }
+}
+
+.form-group {
+    &.hasError {
+        .placeholder-wrapper {
+            display: block;
+            //flex-direction: row;
+            background-color: $bbva-white-red;
+            border-bottom: solid 1px $bbva-dark-red;
+
+            .form-control {
+                background-color: $bbva-white-red;
+                border-bottom: none;
+            }
+
+            .placeholder-simulator {
+                color: $bbva-dark-red;
+            }
+        }
+    }
+}
+
+.form-control {
+    display: block;
+    width: calc(100% - 22px);
+    height: 33px;
+    padding: 22px 11px 0;
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.25;
+    border: transparent;
+    border-style: none none solid;
+    border-image: initial;
+    border-bottom: 1px solid $bbva-500;
+    background: rgb(244, 244, 244);
+    background-clip: padding-box;
+    border-radius: 0;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: default;
+    }
+}
+
+.placeholder-wrapper .placeholder-simulator {
+    color: #666;
+    font-size: 15px;
+    padding: 0 12px;
+    position: absolute;
+    top: 16px;
+    transition: all .25s ease;
+}
+
+.placeholder-wrapper {
+    position: relative;
+}
+
+.grid-container {
+    @include grid('.grid-item', 1 2);
+    
+    .grid-item-t {
+        @include grid('.grid-item', 1 3);
+    }
+
+    .grid-item-middle {
+        @include grid('.grid-item', 2);
+    }    
+
+    .grid-item {
+        //display: contents;
+        .item-fill {
+            height: 100%;
+            position: relative;
+
+            .item-corner {
+                width: 100%;
+            }
+        }
+
+        .grid-item-middle {
+            width: 100%;
+            height: 60px;
+        }
+    }
+}
+
+.grid-container-t {
+    @include grid('.grid-item', 1 3);
+
+    .grid-item {
+        .item-fill {
+            height: 100%;
+            position: relative;
+
+            .item-corner {
+                width: 100%;
+            }
+        }
+    }
+
+    .grid-item-t {
+        @include grid('.grid-item', 1 3);
+    }
+}
+
+.i-form,
+.modal {
+    &.accordion {
+        .step-header {
+            cursor: pointer;
+            text-shadow: none;
+            border-bottom: 1px solid $bbva-400;
+
+            &:last-of-type {
+                border-bottom: none;
+            }
+
+            .step-name {
+                width: 95%;
+                color: #666666;
+
+                @include to (m) {
+                    width: 90%;
+                    font-size: 13px;
+                }
+            }
+
+            .step-arrow {
+                .bbva-icon {
+                    font-size: 30px;
+                    color: $bbva-dark-medium-blue;
+                }
+            }
+
+            &.is-open {
+                border-bottom: none;
+            }
+        }
+    }
+
+    label {
+        //color: $bbva-600;
+        font-family: "BentonSansBBVA-Medium", sans-serif !important;
+        font-size: 14px;
+        margin-bottom: 15px;
+        margin-top: 20px;
+        font-weight: inherit !important;
+        line-height: 1.2;
+        display: inline-block;
+        max-width: 100%;
+    }
+}
+
+.modal {
+    .grid-container {
+        @include grid('.grid-item', 1 2);
+    }
+
+    .step-container {
+        @include from(l) {
+            padding: 1.875rem 5px;
+        }
+    }
+}
+
+.step-header {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-family: "BentonSansBBVA-Medium", sans-serif !important;
+    width: 100%;
+    height: 5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.4rem;
+    text-shadow: 0 1px 0 $bbva-white;
+    border-bottom: none;
+    transition: all .2s;
+    color: $bbva-600;
+
+    @include to(m) {
+        font-size: 16px;
+    }
+}
+
+.content .step-container {
+    margin: 0 0.9375rem;
+    padding: 1.875rem 5px;
+    @include from(l){
+      padding: 1.875rem 150px;
+    }
+    &.main-container{
+      @include from(l){
+        padding: 1.875rem 341px;
+      }
+    }
+  }
+
+.checkbox-area {
+    margin-bottom: 32px;
+
+    &.error {
+        .checkbox {
+            border: 1px solid$bbva-dark-coral;
+            background-color: $bbva-white-coral;
+        }
+
+        .text-message {
+            font-size: 12px;
+            vertical-align: sub;
+
+            .bbva-icon {
+                font-size: 16px;
+                color: $bbva-dark-red;
+                float: left;
+            }
+        }
+    }
+}
+
+.checkbox {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    border-radius: 1px;
+    border: 1px solid $bbva-500;
+    background-color: $bbva-100;
+    color: $bbva-core-blue;
+    cursor: pointer;
+    vertical-align: middle;
+
+    .bbva-icon {
+        opacity: 0;
+        margin: 0;
+        font-size: 24px;
+        line-height: 20px;
+
+        &:before {
+            vertical-align: unset;
+        }
+    }
+
+    &.checked {
+        .bbva-icon {
+            opacity: 1;
+        }
+    }
+
+    &.disabled {
+        background-color: $bbva-400;
+        cursor: auto;
+
+        &:hover {
+            box-shadow: 0px 0px 5px 0px $bbva-500;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            ;
+        }
+    }
+}
+
+/*DROP DOWN LIST*/
+.form-group-select {
+    color: $bbva-500;
+
+    ul {
+        background: $bbva-100;
+        position: absolute;
+        width: 100%;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+        z-index: 7;
+        max-height: 150px;
+        overflow-y: auto;
+    }
+
+    li {
+        //line-height: 3.5;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 9;
+        font-family: 'BentonSansBBVA-Book';
+        font-weight: 400;
+        font-size: 1rem;
+        letter-spacing: -0.19px;
+        text-align: left;
+        border-top: 1px solid $bbva-200;
+        padding: 0.8rem 0.625rem;
+        //padding-left: 0.625rem;
+        -webkit-flex: 1;
+        flex: 1;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: normal;
+        cursor: pointer;
+
+        &:hover {
+            background: $bbva-200;
+        }
+    }
+
+    &.hasError {
+        .option-select .select-title {
+            background-color: $bbva-white-red;
+            border-bottom: solid 1px $bbva-dark-red;
+            color: $bbva-dark-red;
+
+            .bbva-icon {
+                color: $bbva-dark-red;
+            }
+        }
+    }
+
+    .option-select {
+        position: relative;
+
+        .select-title {
+            background: $bbva-100;
+            height: 56px;
+            padding-left: 12px;
+            padding-top: 4px;
+            position: relative;
+            border-bottom: 1px solid $bbva-500;
+
+            .option-text {
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+                font-size: 12px;
+
+                &.center {
+                    font-size: 15px;
+                    margin-top: 15px;
+                }
+            }
+
+            .option-text,
+            .selected-option {
+                display: block;
+            }
+
+            .selected-option {
+                font-size: 15px;
+
+                &.large {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    -o-text-overflow: ellipsis;
+                    text-overflow: ellipsis;
+                    width: 240px;
+
+                    @include from(1300px) {
+                        width: 310px;
+                    }
+                }
+            }
+
+            .bbva-icon {
+                top: 14%;
+                right: 0px;
+                position: absolute;
+                font-size: 44px;
+                color: #2A86CA;
+                cursor: pointer;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                -webkit-transition-duration: .1s;
+                transition-duration: .1s;
+                -webkit-transition-timing-function: cubic-bezier(0.42, 0, 0.58, 0.5);
+                transition-timing-function: cubic-bezier(0.42, 0, 0.58, 0.5);
+            }
+        }
+
+        &.disabled {
+            opacity: 0.5;
+
+            .select-title {
+                .bbva-icon {
+                    cursor: default;
+                }
+            }
+        }
+    }
+
+    &.white {
+        .select-title {
+            background: $bbva-white;
+        }
+
+        ul {
+            background: $bbva-white;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+.actionsection {
+    height: 56px;
+    margin-top: 33px;
+    text-align: center;
+
+    &.cards_master {
+        margin-top: 0px;
+        padding-right: 16.8px;
+    }
+}
+
+.btn {
+    position: relative;
+    zoom: 1;
+    width: 100%;
+    display: block
+}
+
+.btn::before,
+.btn::after {
+    content: '.';
+    display: block;
+    height: 0;
+    overflow: hidden
+}
+
+.btn::after {
+    clear: both
+}
+
+.btn__basic {
+    font-family: "BentonSansBBVA-Bold", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 16px;
+    max-width: 100%;
+    line-height: 16px;
+    padding: 16px 12px;
+    border-radius: 1px;
+    min-width: 94px;
+    display: inline-block;
+    border: 0;
+    background-color: #1d73b2;
+    will-change: background-position;
+    background-size: 210% 100%;
+    background-position: 99% center;
+    background-repeat: no-repeat;
+    -webkit-transition: background-position .66667s cubic-bezier(0.24, 0.22, 0.31, 1.07);
+    transition: background-position .66667s cubic-bezier(0.24, 0.22, 0.31, 1.07);
+    background-color: #1d73b2;
+    background-image: linear-gradient(100deg, #1464a5 50%, #1d73b2 50%);
+
+    &.btn__small {
+        padding: 12px 12px;
+    }
+
+    &.btn__cards-small {
+        padding: 5px;
+        margin: 0px 5px;
+    }
+}
+
+@media(min-width:600px) {
+
+    .btn__basic,
+    .btn__small {
+        font-size: 15px;
+        line-height: 24px
+    }
+}
+
+@media(min-width:992px) {
+    .btn__basic {
+        padding: 16px 32px;
+        line-height: 24px;
+
+        &.btn__small {
+            padding: 12px 32px;
+        }
+    }
+}
+
+.btn__basic:hover,
+.btn__basic:focus {
+    background-position: 0 center
+}
+
+.btn__medium-blue,
+.btn__background--aqua,
+.btn__background--light-blue,
+.btn__spotlight-dark-blue,
+.btn__spotlight-aqua {
+    background-color: #1d73b2;
+    will-change: background-position;
+    background-size: 210% 100%;
+    background-position: 99% center;
+    background-repeat: no-repeat;
+    -webkit-transition: background-position .66667s cubic-bezier(0.24, 0.22, 0.31, 1.07);
+    transition: background-position .66667s cubic-bezier(0.24, 0.22, 0.31, 1.07);
+    background-color: #1d73b2;
+    background-image: linear-gradient(100deg, #1464a5 50%, #1d73b2 50%)
+}
+
+.btn__core-blue,
+.btn__background--core-blue,
+.btn__spotlight-blue {
+    background-color: #004481;
+    will-change: background-position;
+    background-size: 210% 100%;
+    background-position: 99% center;
+    background-repeat: no-repeat;
+    -webkit-transition: background-position .66667s cubic-bezier(0.24, 0.22, 0.31, 1.07);
+    transition: background-position .66667s cubic-bezier(0.24, 0.22, 0.31, 1.07);
+    background-color: #004481;
+    background-image: linear-gradient(100deg, #043263 50%, #004481 50%)
+}
+
+.btn__full,
+.btn--full {
+    width: 100%
+}
+
+.btn__disabled,
+.btn--disabled {
+    color: #bdbdbd;
+    background-color: #e9e9e9;
+    background-image: none;
+}
+
+.btn--hover,
+.btn--active {
+    opacity: .8
+}
+
+.submtbtn {
+    text-align: center;
+    margin-bottom: 12px;
+
+    &.sub_fb {
+        margin-bottom: 32px;
+    }
+
+    &.sub_cards_master {
+        text-align: right;
+
+        @include to(m) {
+            margin-top: 30px;
+        }
+    }
+}
+
+.btn__basic.btn__clearbg {
+    background-color: transparent;
+    color: $bbva-medium-blue;
+    background-image: none;
+    padding: 0px;
+
+    &.btn_big {
+        font-size: 18px;
+    }
+
+    &.btn__disabled {
+        color: #bdbdbd;
+        background-image: none;
+        cursor: auto;
+    }
+}
+
+a {
+    color: $bbva-core-blue;
+    text-decoration: none
+}
+
+.badge {
+    padding: 0.125rem 0.25rem;
+    display: inline-block;
+    font-size: 0.755rem;
+    text-transform: uppercase;
+
+    &.neutral {
+        color: $bbva-white;
+        background-color: #666666;
+    }
+
+    &.simple {
+        color: $bbva-500;
+        text-transform: lowercase;
+    }
+}
+
+/*Tooltip popper*/
+$popper-bg: $bbva-white-medium-blue;
+
+.tooltip {
+    //background: $popper-bg;
+    background-color: $bbva-white;
+    padding: 10px;
+    text-align: center;
+    color: $bbva-600;
+    font-size: 0.91rem;
+    z-index: 2;
+    border-radius: 1px;
+    box-shadow: 0 0 10px 1px $bbva-600-20;
+
+    .tooltip-arrow {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        position: absolute;
+        margin: 5px;
+    }
+
+    &[x-placement^="top"] {
+        margin-bottom: 5px;
+
+        .tooltip-arrow {
+            border-width: 5px 5px 0 5px;
+            border-color: $bbva-white transparent transparent transparent;
+            bottom: -5px;
+            left: calc(50% - 5px);
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &[x-placement^="bottom"] {
+        margin-top: 5px;
+
+        .tooltip-arrow {
+            border-width: 0 5px 5px 5px;
+            border-color: transparent transparent $bbva-white transparent;
+            top: -5px;
+            left: calc(50% - 5px);
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &[x-placement^="right"] {
+        margin-left: 5px;
+
+        .tooltip-arrow {
+            border-width: 5px 5px 5px 0;
+            border-color: transparent $bbva-white transparent transparent;
+            left: -5px;
+            top: calc(50% - 5px);
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    &[x-placement^="left"] {
+        margin-right: 5px;
+
+        .tooltip-arrow {
+            border-width: 5px 0 5px 5px;
+            border-color: transparent transparent transparent $bbva-white;
+            right: -5px;
+            top: calc(50% - 5px);
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+
+.e-tooltip.help {
+    color: $bbva-medium-blue;
+    font-size: 1.4rem;
+}
+
+span.svgicon {
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+}
+
+.binary .radio-buttons {
+    padding: 5px;
+    @include grid('.radio-button', 2 3);
+}
+
+.radios-three .radio-buttons {
+    padding-top: 10px;
+    @include grid('.radio-button', 1 3);
+    grid-gap: 0px !important;
+}
+
+.title-blue {
+    font-size: 20px;
+    line-height: 25px;
+    color: $bbva-core-blue;
+}
+
+.title-green {
+    font-size: 25px;
+    text-align: center;
+    line-height: 25px;
+    margin: 24px 0px;
+    color: $bbva-green;
+
+    .bbva-icon:before {
+        vertical-align: text-top !important;
+    }
+
+    @include to(m) {
+        padding-top: 24px;
+    }
+}
+
+.title-red {
+    font-size: 25px;
+    text-align: center;
+    line-height: 25px;
+    margin: 24px 0px;
+    color: $bbva-dark-coral;
+
+    .bbva-icon:before {
+        vertical-align: text-top !important;
+    }
+
+    @include to(m) {
+        padding-top: 24px;
+    }
+}
+
+.message-modal {
+    text-align: center;
+    font-size: 15px;
+}
+
+.subtitle-sec {
+    color: $bbva-600;
+    font-size: 18px;
+    margin-bottom: 32px;
+    font-weight: 700;
+}
+
+textarea {
+    &.form-control {
+        min-height: 80px;
+        resize: none;
+    }
+}
+
+.centertext {
+    text-align: center;
+}
+
+.icon-m {
+    margin: -20px auto 15px auto;
+    height: 70px;
+    width: 70px;
+
+    @include to(m) {
+        margin: 15px auto;
+    }
+
+    &.icon-s {
+        background-image: url("../images/icons/Artboard 42.svg");
+        background-repeat: no-repeat;
+    }
+
+    &.icon-e {
+        background-image: url("../images/icons/Artboard 41.svg");
+        background-repeat: no-repeat;
+    }
+}
+
+div.link {
+    text-align: center;
+    color: $bbva-medium-blue;
+    max-width: 100%;
+    line-height: 16px;
+    padding: 16px 12px;
+
+    a {
+        font-weight: normal;
+    }
+}
+
+.uploadfile {
+    background-color: transparent !important;
+    &.empty {
+        cursor: pointer;
+        .icon {
+            font-size: 1.7rem !important;
+        }
+
+        .message__heading {
+            line-height: 2rem;
+        }
+    }
+
+    .wrapper {
+        min-height: 88px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        padding: 1.2rem 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        width: 100%;
+        color: $bbva-medium-blue;
+
+        @include to(m) {
+            min-height: 40px;
+            padding: 1rem 0;
+        }
+
+        .icon {
+            font-size: 3.7rem;
+        }
+
+        .message {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding-left: 1.5rem;
+            font-family: 'BentonSansBBVA-Medium', 'Benton Sans';
+            font-size: 1.2rem;
+
+            &.message_cards {
+                padding-left: 0rem;
+
+                &.const {
+                    margin: auto;
+                }
+            }
+
+            .message__body {
+                line-height: 1rem;
+                display: flex;
+
+                @include to(m) {
+                    line-height: 1.5rem;
+                }
+
+                span {
+                    cursor: pointer;
+                    width: max-content;
+                    @include allanimation();
+
+                    &:hover {
+                        color: $bbva-core-blue;
+                    }
+                }
+
+                span:not(:first-child) {
+                    margin-left: 1.5rem;
+
+                    @include to(m) {
+                        margin-left: 0.3rem;
+                    }
+                }
+
+                [class^=ui-] {
+                    font-size: 1.7rem;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+#filecontainer.empty {
+    @include grid('.grid-item', 1);
+}
+
+.dragndrop {
+    background-color: $bbva-white-light-blue;
+    border: 2px dashed $bbva-white-medium-blue;
+    padding: 25px 12px;
+    cursor: pointer;
+
+    img {
+        display: block;
+        width: 140px;
+        margin: 26px auto;
+        height: auto;
+    }
+
+    .message {
+        color: $bbva-core-blue;
+        font-size: 16px;
+        text-align: center;
+        padding: 20px;
+        font-family: 'BentonSansBBVA-Medium', 'Benton Sans';
+
+        .submessage {
+            font-family: "BentonSansBBVA-Book", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    }
+}
+
+.fileform {
+    .uploadfile {
+        margin-bottom: 12px !important;
+    }
+}
+
+b {
+    font-weight: bold !important;
+}
+
+#show-menu {
+    padding-top: 0px;
+    position: absolute;
+
+    .opacity {
+        opacity: 0.3;
+        background-color: $bbva-100;
+        min-height: 100vh;
+        max-height: 100vh;
+        width: calc(100vw - 380px);
+        z-index: 15;
+
+        @include to(m) {
+            width: 0;
+        }
+    }
+
+    #menu-options {
+        background-color: $bbva-navy;
+        width: 380px;
+        min-height: 100vh;
+        max-height: 100vh;
+        z-index: 15;
+        right: 0;
+        line-height: 32px;
+        padding: 20px 30px;
+        position: relative;
+        border-bottom: 1px solid $bbva-dark-core-blue;
+        border-top: 1px solid $bbva-dark-core-blue;
+        border-left: 1px solid $bbva-dark-core-blue;
+
+        @include to(m) {
+            width: 100vw;
+        }
+
+        .title-section-menu {
+            font-size: 22px;
+            font-family: "BentonSansBBVA-Medium", sans-serif !important;
+            color: $bbva-white;
+        }
+
+        .btn-menu-options {
+            font-size: 15px;
+            color: $bbva-400;
+
+            &:hover {
+                cursor: pointer;
+                color: $bbva-white;
+            }
+        }
+
+        .btn-menu-services {
+            font-size: 12px;
+            color: $bbva-400;
+            line-height: 24px;
+
+            .bbva-icon {
+                font-size: 20px;
+                color: $bbva-dark-medium-blue;
+            }
+
+            &:hover {
+                cursor: pointer;
+                color: $bbva-white;
+            }
+        }
+    }
+}
+
+.separator-div {
+    height: 1px;
+    width: 100%;
+    background-color: $bbva-400;
+    margin: 0px;
+}
+
+#profile-view {
+    margin: auto;
+    width: 300px;
+    height: auto;
+
+    img {
+        height: 100%;
+        width: 100%;
+        box-shadow: 0 0 25px 1px $bbva-600;
+    }
+}
+
+.avatar {
+    border-radius: 50%;
+    min-width: 48px;
+    min-height: 48px;
+    max-width: 48px;
+    max-height: 48px;
+    mix-blend-mode: multiply;
+    background: linear-gradient(117deg, $bbva-light-orange 50%, $bbva-orange 50%);
+    color: $bbva-white;
+    font-size: 18px;
+    margin-right: 1rem;
+    text-align: center;
+    padding-top: 10px;
+
+    .bbva-icon {
+        color: $bbva-white-light-blue;
+        font-size: 30px;
+        margin: 0px !important;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: $bbva-dark-light-blue;
+    }
+}
+
+.flex-items {
+    display: flex;
+    align-items: stretch;
+}
+
+#slider {
+    position: relative;
+    overflow: hidden;
+    width: 100% !important;
+    height: 80px;
+
+    ul {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        list-style: none;
+
+        li {
+            font-size: 12px;
+            position: relative;
+            display: block;
+            float: left;
+            margin: 0;
+            padding: 0px;
+            height: 100%;
+            width: 100%;
+            background-color: $bbva-white-gold;
+            color: $bbva-600;
+            border: none;
+
+            @include to(m) {
+                width: 335px;
+
+                div {
+                    font-size: 10px;
+                    line-height: 11px !important;
+                }
+            }
+
+            .bbva-icon {
+                font-size: 18px;
+                color: $bbva-dark-gold;
+                line-height: 20px;
+                vertical-align: baseline;
+            }
+
+            div {
+                &:first-of-type {
+                    padding: 8px 45px 3px 45px;
+                }
+
+                word-wrap: break-word;
+                padding: 3px 45px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    a.control_prev,
+    a.control_next {
+        position: absolute;
+        z-index: 7;
+        display: block;
+        padding: 2.5% 0%;
+        width: auto;
+        height: auto;
+        color: $bbva-dark-gold;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    a.control_prev {
+        left: 0;
+    }
+
+    a.control_next {
+        right: 0;
+    }
+}
+
+#scholar-header {
+    #profile {
+        width: 100%;
+
+        .avatar {
+            width: 20%;
+            margin-right: 5%;
+        }
+
+        .scholar-data {
+            width: 75%;
+
+            div {
+                margin-bottom: 5px;
+                font-size: 12px;
+                line-height: 18px;
+
+                @include to(791px) {
+                    margin-bottom: 4px;
+                    line-height: 14px;
+                }
+            }
+        }
+    }
+}
+
+.mentor-data {
+    div {
+        margin-bottom: 8px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+.t-right {
+    text-align: right;
+}
+
+.status {
+    &.success {
+        color: $bbva-dark-green;
+    }
+
+    &.error {
+        color: $bbva-dark-red;
+    }
+}
+
+.check-required {
+    &.has-error {
+        .checkbox {
+            border: 1px solid$bbva-dark-coral;
+            background-color: $bbva-white-coral;
+        }
+    }
+}
+
+.label-val {
+    font-weight: bold;
+}
+
+#scholarship-informative,
+#deposits-pending,
+#deposits-table {
+    margin-bottom: 32px;
+}
+
+.grid-table {
+    display: grid;
+    grid-template-columns: repeat(2, 20%) repeat(2, 30%);
+    grid-template-rows: auto;
+
+    @include to(m) {
+        grid-template-columns: repeat(4, 40%);
+        grid-template-rows: auto;
+    }
+
+    &.header-t {
+        font-family: "BentonSansBBVA-Medium", sans-serif !important;
+        font-size: 13px;
+        min-height: 40px;
+        border-bottom: 1px solid $bbva-400;
+
+        div {
+            color: $bbva-600;
+            padding-top: 10px;
+        }
+    }
+
+    &.content-t {
+        color: $bbva-600;
+        font-size: 13px;
+        min-height: 40px;
+        margin: auto;
+
+        div {
+            width: 100%;
+            height: 100%;
+            padding: 10px 0px;
+
+            &.success {
+                color: $bbva-dark-green;
+            }
+
+            &.error {
+                color: $bbva-dark-red;
+            }
+
+            &.warning {
+                color: $bbva-dark-orange;
+            }
+        }
+
+        &:nth-child(even) {
+            div {
+                background-color: #d4edfc9c; // $bbva-white-light-blue;
+            }
+        }
+
+        &:nth-child(odd) {
+            div {
+                background-color: $bbva-white;
+            }
+        }
+    }
+}
+
+.grid-table-simple {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: max-content;
+
+    &.header-t {
+        font-family: "BentonSansBBVA-Medium", sans-serif !important;
+        font-size: 13px;
+        min-height: 40px;
+        border-bottom: 1px solid $bbva-400;
+
+        div {
+            color: $bbva-600;
+            padding-top: 10px;
+        }
+
+        @include to(m) {
+            font-size: 14px;
+        }
+    }
+
+    &.content-t {
+        color: $bbva-600;
+        font-size: 13px;
+        min-height: 40px;
+        margin: auto;
+        border-bottom: 1px solid $bbva-400;
+
+        div {
+            width: 100%;
+            height: 100%;
+            padding: 10px 0px;
+
+            &:first-child,
+            &.mess {
+                margin: auto;
+                font-size: 15px;
+
+                @include to(m) {
+                    font-size: 12px;
+                }
+            }
+
+            @include to(m) {
+                padding: 10px 0px;
+            }
+        }
+    }
+}
+
+//Cards Para calificaciones
+.cards {
+    background: #FFFFFF;
+    //border: 1px solid #BDBDBD;
+    border-radius: 1px;
+    margin: 5px;
+    margin-bottom: 25px;
+
+    &.qualif{
+        margin: 15px 0px!important;
+    }
+
+    &.cards_notification {
+        float: left;
+        margin: 0px;
+        border: 1px solid #fff;
+        margin-bottom: 25px;
+        width: 100%;
+    }
+
+    &.opacity_card {
+        opacity: 0.7;
+    }
+
+    &.gray_scale {
+        filter: grayscale(100%);
+        opacity: 0.5;
+
+        .uploadfile {
+            .message__body {
+                span {
+                    cursor: not-allowed;
+
+                    &:hover {
+                        color: $bbva-medium-blue;
+                    }
+                }
+            }
+        }
+
+        .btn__submit {
+            cursor: not-allowed;
+        }
+    }
+
+    &.deposits {
+        border: 1px solid $bbva-400;
+    }
+
+    .cards-base {
+        background: #fff;
+        padding: 24px;
+        height: 100%;
+    }
+
+    .constancy {
+        color: $bbva-500;
+        font-size: 16px;
+        margin: auto 0px;
+    }
+
+    .cards-tittle {
+        height: 160px;
+        border-radius: 1px 1px 0 0;
+        clip-path: polygon(0% 0, 100% 0%, 100% 95%, 0 100%);
+        padding: 35px 52px;
+
+        &.mi_first {
+            background: #1973B8;
+        }
+
+        &.mi_second {
+            background: #072146;
+        }
+
+        &.mi_third {
+            background: #072146;
+        }
+    }
+
+    .micro-ilustration {
+        overflow: hidden;
+        top: 0;
+        width: 184px;
+        height: 89px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.8;
+
+        &.mi_first {
+            background-image: url("../images/microilustrations/Artboard_30.png");
+        }
+
+        &.mi_second {
+            background-image: url("../images/microilustrations/Artboard 43.png");
+
+        }
+
+        &.mi_third {
+            background-image: url("../images/microilustrations/Artboard_46.png");
+        }
+    }
+
+    .cards-content {
+        padding: 10px 16px;
+    }
+
+    .container-notification {
+        display: inline-block;
+        vertical-align: middle;
+
+        .tittle {
+            font-size: 15px;
+            line-height: 24px;
+            font-family: "BentonSansBBVA-Medium", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #121212;
+            text-align: left;
+            letter-spacing: 0;
+            line-height: 20px;
+            margin-bottom: 8px;
+            max-height: 40px;
+            display: block;
+        }
+
+        .subttitle {
+            font-family: "BentonSansBBVA-Book", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #121212;
+            text-align: left;
+            letter-spacing: 0;
+            line-height: 20px;
+            color: #626262;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .bbva-icon {
+            font-size: 24px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 16px;
+            color: #1d73b2;
+            display: inline-block;
+        }
+
+        .pending-deposits {
+            background: $bbva-white-orange;
+            padding: 5px;
+            text-align: center;
+            margin-bottom: 10px;
+            font-family: BentonSansBBVA-Book;
+            color: $bbva-dark-orange;
+
+            label.title-orange {
+                font-family: BentonSansBBVA-Medium;
+            }
+        }
+    }
+
+    .tittle {
+        opacity: 0.82;
+        font-family: BentonSansBBVA-Medium;
+        font-size: 13px;
+        color: #8E7022;
+        letter-spacing: 0;
+        line-height: 16px;
+    }
+}
+
+.tHead {
+    label {
+        font-family: BentonSansBBVA-Medium;
+        font-size: 1.2rem;
+        color: #121212;
+        letter-spacing: 0;
+        text-align: left;
+
+        @include to(m) {
+            font-size: 1rem;
+        }
+    }
+}
+
+.tBody {
+    label {
+        font-family: BentonSansBBVA-Book;
+        font-size: 1.2rem;
+        color: #121212;
+        letter-spacing: 0;
+        text-align: left;
+    }
+}
+
+.card-pass {
+    margin-bottom: 32px;
+
+    .instructions {
+        background: url(../../images/fractal-bbva-core-blue.svg);
+        background-repeat: no-repeat;
+        background-color: $bbva-core-blue;
+        color: $bbva-white;
+        padding: 10px;
+
+        img {
+            width: auto;
+            height: 100px;
+            margin: 15px auto;
+        }
+
+        .t-white-m {
+            font-size: 18px;
+            line-height: 20px;
+            text-align: center;
+        }
+
+        .t-white-s {
+            font-size: 15px;
+            line-height: 18px;
+        }
+
+        .vin {
+            font-size: 12px;
+
+            .bbva-icon {
+                font-size: 8px;
+                color: $bbva-dark-light-blue;
+                vertical-align: bottom;
+            }
+        }
+    }
+}
+
+.vin-li {
+    .bbva-icon {
+        font-size: 10px;
+        color: $bbva-core-blue;
+        vertical-align: bottom;
+    }
+}
+
+.grid-container-home {
+    display: grid;
+    grid-template-columns: 22% 75%;
+    grid-gap: 3%;
+
+    @include to(m) {
+        grid-template-columns: 100%;
+        grid-gap: 0%;
+    }
+}
+
+a.link {
+    font-size: 15px;
+    line-height: 24px;
+    -webkit-line-clamp: 2;
+    font-family: "BentonSansBBVA-Medium", Helvetica, Arial, sans-serif;
+    color: #1d73b2;
+    text-align: left;
+    letter-spacing: 0;
+}
+
+.d-contents {
+    display: contents;
+}
+
+.e-stars {
+    text-align: center;
+    color: $bbva-400;
+
+    .e-star {
+        margin: 0px;
+        margin-left: -2px;
+        cursor: pointer;
+
+        &.blue-star {
+            color: $bbva-medium-blue !important;
+        }
+    }
+
+    &.has-error {
+        .e-star {
+            color: $bbva-light-red;
+        }
+
+        .text-message {
+            font-size: 12px;
+            vertical-align: sub;
+            color: $bbva-600;
+
+            .bbva-icon {
+                font-size: 16px;
+                color: $bbva-dark-red;
+                //float: left;
+            }
+        }
+    }
+}
+
+.grid-qualifications {
+    display: grid;
+    grid-template-columns: repeat(2, 20%) 60%;
+    grid-gap: 1%;
+
+    @include to(m) {
+        grid-template-columns: repeat(3, 33%);
+    }
+}
+
+.grid-constancy {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-gap: 2%;
+
+    @include to(m) {
+        grid-template-columns: 66% 33%;
+    }
+}
+
+.title-b {
+    color: #121212;
+    font-size: 1rem;
+    height: 40px;
+    font-weight: 700;
+    padding-top: 5px;
+    padding: 10px 0px;
+}
+
+.all-table {
+    @include to(m) {
+        overflow-x: auto;
+        max-height: 400px;
+        overflow-y: auto;
+    }
+}
+
+.content-table {
+    @include from(m) {
+        max-height: 400px;
+        overflow-y: auto;
+    }
+}
+
+.responsivity-visor{
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}

@@ -1,0 +1,83 @@
+<form name="tutordata" action="#" class="form-gray notify-on-error" method="post" target="_top" id="formldata">
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="grid-container-s">
+                <div class="grid-item">
+                    <div class="form-validation-group">
+                        <div class="form-group">
+                            <input class="form-control uppercase letters" name="tutorname" id="tutorname" type="text"
+                                data-placeholder="Nombre" required autocomplete="off" value="{{tutorName}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="form-validation-group">
+                        <div class="form-group">
+                            <input class="form-control uppercase letters" name="tutorfirstname" id="tutorfirstname"
+                                type="text" data-placeholder="Apellido paterno" required autocomplete="off" value="{{firstNameTutor}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="item-fill">
+                        <div class="item-corner">
+                            <div class="checkbox-area">
+                                <span class="checkbox" data-targetdisable="#tutorfirstname" data-targettoggle="#checktutorlastname"
+                                    id="checktutorfirstname"><i class="bbva-icon ui-checkmark"></i></span>
+                                <span class="text">Sin apellido paterno</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="form-validation-group">
+                        <div class="form-group">
+                            <input class="form-control uppercase letters" name="tutorlastname" id="tutorlastname" type="text"
+                                data-placeholder="Apellido materno" required autocomplete="off" value="{{lastNameTutor}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="item-fill">
+                        <div class="item-corner">
+                            <div class="checkbox-area">
+                                <span class="checkbox" data-targetdisable="#tutorlastname" data-targettoggle="#checktutorfirstname"
+                                    id="checktutorlastname"><i class="bbva-icon ui-checkmark"></i></span>
+                                <span class="text">Sin apellido materno</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-container-s">
+                <div class="grid-item">
+                    <div class="form-group-select required" id="relationship">
+                        <div class="option-select">
+                            <div class="select-title sl">
+                                <span class="option-text sl center">Parentesco</span>
+                                <span class="selected-option sl"></span>
+                                <i class="bbva-icon ui-simple-down sl"></i>
+                            </div>
+                            <div class="list-result"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item" id="other_relationship" style="display: none">
+                    <div class="form-validation-group">
+                        <div class="form-group">
+                            <input class="form-control uppercase letters" name="o_relationship" id="o_relationship" type="text"
+                                data-placeholder="Especifica parentesco" autocomplete="off" value="{{kinshipType}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="submtbtn t-right">
+        <span title="Continuar" aria-label="Continuar" class="btn__basic btn__submit" id="btn_savetutord">
+            <span aria-hidden="true">Guardar</span>
+        </span>
+    </div>
+</form>

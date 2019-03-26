@@ -1,0 +1,151 @@
+<form name="form" action="#" class="form-gray notify-on-error" method="post" target="_top" id="formdomiciledata">
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="form-validation-group">
+                <div class="form-group">
+                    <input class="form-control letnum uppercase" name="street" id="street" type="text" data-placeholder="Calle"
+                        required autocomplete="off" value="{{street}}">
+                </div>
+            </div>
+        </div>
+        <div class="grid-item-middle">
+            <div class="grid-item">
+                <div class="form-validation-group">
+                    <div class="form-group">
+                        <input class="form-control uppercase numg" name="outdoornum" id="outdoornum" type="text"
+                            data-placeholder="N&uacute;mero exterior" required autocomplete="off" value="{{numExterior}}">
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="form-validation-group">
+                    <div class="form-group">
+                        <input class="form-control uppercase numg" name="interiornum" id="interiornum" type="text"
+                            data-placeholder="N&uacute;mero interior" autocomplete="off" value="{{numInterior}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="form-validation-group">
+                <div class="form-group">
+                    <input class="form-control numbers" name="zipcode" id="zipcode" type="text" data-placeholder="C&oacute;digo postal"
+                        required autocomplete="off" maxlength="5" data-regex="ZIPCODE" value="{{codePostal}}">
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="form-group-select whitwait states required" id="state">
+                <div class="option-select">
+                    <div class="select-title sl">
+                        <span class="option-text sl center">Estado</span>
+                        <span class="selected-option sl"></span>
+                        <i class="bbva-icon ui-simple-down sl"></i>
+                    </div>
+                    <div class="list-result"></div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="form-group-select required" id="municipalities">
+                <div class="option-select disabled">
+                    <div class="select-title sl">
+                        <span class="option-text sl center">Municipio</span>
+                        <span class="selected-option sl"></span>
+                        <i class="bbva-icon ui-simple-down sl"></i>
+                    </div>
+                    <div class="list-result"></div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="form-validation-group">
+                <div class="form-group">
+                    <input class="form-control letnum uppercase" name="locality" id="locality" type="text"
+                        data-placeholder="Localidad" required autocomplete="off" value="{{locality}}">
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="form-validation-group">
+                <div class="form-group">
+                    <input class="form-control letnum uppercase" name="neighborhood" id="neighborhood" type="text"
+                        data-placeholder="Colonia" required autocomplete="off" value="{{colony}}">
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="form-validation-group">
+                <div class="form-group">
+                    <input class="form-control letnum uppercase" name="betweenstreet" id="betweenstreet" type="text"
+                        data-placeholder="Entre la calle" required autocomplete="off" value="{{betweenStreet}}">
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="form-group-select whitwait road-type required" id="road1">
+                <div class="option-select">
+                    <div class="select-title sl">
+                        <span class="option-text sl center">Tipo de vialidad</span>
+                        <span class="selected-option sl"></span>
+                        <i class="bbva-icon ui-simple-down sl"></i>
+                    </div>
+                    <div class="list-result"></div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="form-validation-group">
+                <div class="form-group">
+                    <input class="form-control letnum uppercase" name="andstreet" id="andstreet" type="text"
+                        data-placeholder="Y la calle" required autocomplete="off" value="{{andTheStreet}}">
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="form-group-select whitwait road-type required" id="road2">
+                <div class="option-select">
+                    <div class="select-title sl">
+                        <span class="option-text sl center">Tipo de vialidad</span>
+                        <span class="selected-option sl"></span>
+                        <i class="bbva-icon ui-simple-down sl"></i>
+                    </div>
+                    <div class="list-result"></div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="form-validation-group">
+                <div class="form-group">
+                    <input class="form-control letnum uppercase" name="behindstreet" id="behindstreet" type="text"
+                        data-placeholder="Calle de atr&aacute;s" required autocomplete="off" value="{{behindStreet}}">
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="form-group-select whitwait road-type required" id="road3">
+                <div class="option-select">
+                    <div class="select-title sl">
+                        <span class="option-text sl center">Tipo de vialidad</span>
+                        <span class="selected-option sl"></span>
+                        <i class="bbva-icon ui-simple-down sl"></i>
+                    </div>
+                    <div class="list-result"></div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="form-validation-group">
+                <div class="form-group">
+                    <textarea class="form-control letnum e-tooltip-f" name="references" id="references" type="text"
+                        data-placeholder="Referencias" required autocomplete="off" data-tooltitle="Por ejemplo: Casa color verde, frente al parque">{{particularReferences}}</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="submtbtn t-right">
+        <span title="Continuar" aria-label="Continuar" class="btn__basic btn__submit" id="btn_savedomiciled">
+            <span aria-hidden="true">Guardar</span>
+        </span>
+    </div>
+</form>

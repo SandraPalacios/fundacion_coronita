@@ -1,0 +1,82 @@
+<div class="content">
+    <div class="container">
+        <div class="radio-tab">
+            <label data-index="0" class="active">
+                <span class="tab-content">
+                    <span class="label">
+                        Biograf&iacute;a
+                    </span>
+                </span>
+            </label>
+            <label data-index="1">
+                <span class="tab-content">
+                    <span class="label">
+                        Sesiones
+                    </span>
+                </span>
+            </label>
+            <div id="indicator"></div>
+        </div>
+        <div class="card accordeon">
+            <div id="wf0" class="i-form opened">
+                <form name="mentorbio" action="#" class="form-gray" method="post" target="_top" id="formmentorbio">
+                    <div class="step-container">
+                        <div class="grid-container">
+                            <div class="grid-item">
+                                <div class="mentor-data">
+                                    <div class="title-blue label-val">{{name}}</div>
+                                    <div>{{regionName}}</div>
+                                    <div>{{municipality}}, {{state}}</div>
+                                    <div>Antig&#252;edad en BBVA Bancomer: {{jobSeniority}} años</div>
+                                    <div>{{mail}}</div>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <div class="mentor-data">
+                                    <div>{{schoolLevel}}</div>
+                                    <div>{{career}}</div>
+                                    <div>{{universityName}}</div>
+                                    <div>Mi cumple es: {{birthDay}}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="subtitle-sec">Acerca de m&iacute;</div>
+                        <div>{{aboutMe}}</div>
+                        <br>
+                        <div class="subtitle-sec">Mis intereses</div>
+                        <div class="grid-container" id="interest-mentor">
+                            <div class="grid-item in1"></div>
+                            <div class="grid-item in2"></div>
+                        </div>
+                        <br>
+                        <div class="subtitle-sec">Mis competencias</div>
+                        <div class="grid-container" id="proficiencies-mentor">
+                            <div class="grid-item prof1"></div>
+                            <div class="grid-item prof2"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="wf1" class="i-form" style="display: none">
+                <form name="sessions" action="#" class="form-gray notify-on-error" method="post" target="_top" id="formsessions">
+                    {{#sessionsNum}}
+                    <div id="wf{{id}}" class="i-form accordion">
+                        <div class="step-header" data-target="s-{{description}}" data-index="{{id}}">
+                            <div class="step-name">
+                                <i class="bbva-icon ui-calendar"></i>
+                                {{description}} sesi&oacute;n
+                            </div>
+                            <div class="step-arrow">
+                                <i class="bbva-icon ui-plus"></i>
+                            </div>
+                        </div>
+                        <div id="s-{{description}}" class="step-container" style="display: none">
+                        </div>
+                    </div>
+                    {{/sessionsNum}}
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

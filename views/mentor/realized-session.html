@@ -1,0 +1,81 @@
+<br>
+<div class="subtitle-sec">Evalua tu sesi&oacute;n de acuerdo a los siguientes criterios: </div>
+<form name="rsession" action="#" class="form-gray notify-on-error" method="post" target="_top" id="formrsession">
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="form-group-select whitwait time-s required" id="time">
+                <div class="option-select">
+                    <div class="select-title sl">
+                        <span class="option-text sl center">&#191;Cu&aacute;nto dur&oacute; la sesi&oacute;n&#63;</span>
+                        <span class="selected-option sl"></span>
+                        <i class="bbva-icon ui-simple-down sl"></i>
+                    </div>
+                    <div class="list-result"></div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item" hidden>
+            <div class="form-validation-group">
+                <div class="form-group">
+                    <input class="form-control" name="session" id="session" type="text" data-placeholder="session"
+                     autocomplete="off" value="{{id}}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="grid-container-s">
+                <div class="grid-item">
+                    <label>Atenci&oacute;n de tu mentor:</label>
+                    <div class="e-stars" id="starsAttention" data-eval="{{starsAttention}}">
+                        <i class="bbva-icon ui-favorite e-star" data-parent="starsAttention"></i>
+                        <i class="bbva-icon ui-favorite e-star" data-parent="starsAttention"></i>
+                        <i class="bbva-icon ui-favorite e-star" data-parent="starsAttention"></i>
+                        <i class="bbva-icon ui-favorite e-star" data-parent="starsAttention"></i>
+                        <i class="bbva-icon ui-favorite e-star" data-parent="starsAttention"></i>
+                        <p class='i-message'><span class='text-message'>&nbsp;</span></p>
+                    </div>
+                </div>
+                <br>
+                <div class="grid-item" id="starsAttentionComent" style="display: none">
+                    <div class="form-validation-group">
+                        <div class="form-group">
+                            <textarea class="form-control" name="comentsAttention" id="comentsAttention" type="text"
+                                data-placeholder="Comentarios" autocomplete="off">{{attentionCom}}</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="grid-container-s">
+                <div class="grid-item">
+                    <label>Tema de la sesi&oacute;n:</label>
+                    <div class="e-stars" id="starsTopic" data-eval="{{starsTopic}}">
+                        <i class="bbva-icon ui-favorite e-star" data-parent="starsTopic"></i>
+                        <i class="bbva-icon ui-favorite e-star" data-parent="starsTopic"></i>
+                        <i class="bbva-icon ui-favorite e-star" data-parent="starsTopic"></i>
+                        <i class="bbva-icon ui-favorite e-star" data-parent="starsTopic"></i>
+                        <i class="bbva-icon ui-favorite e-star" data-parent="starsTopic"></i>
+                        <p class='i-message'><span class='text-message'>&nbsp;</span></p>
+                    </div>
+                </div>
+                <br>
+                <div class="grid-item" id="starsTopicComent" style="display: none">
+                    <div class="form-validation-group">
+                        <div class="form-group">
+                            <textarea class="form-control" name="comentsTopic" id="comentsTopic" type="text"
+                                data-placeholder="Comentarios" autocomplete="off">{{topicCom}}</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="submtbtn">
+        <span title="Continuar" aria-label="Continuar" class="btn__basic btn__submit" id="btn_save_eval_r" data-session="{{id}}">
+            <span aria-hidden="true">Enviar evaluaci&oacute;n</span>
+        </span>
+    </div>
+</form>

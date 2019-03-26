@@ -1,0 +1,119 @@
+.radio-section {
+    .radio-buttons {
+        @include from(l){
+            height: 37px;
+        }
+        
+        
+        .ckeck-area {
+            width: 23px;
+            height: 23px;
+            display: inline-block;
+            margin: 5px 0px;
+
+            .radio {
+                width: 21px;
+                height: 21px;
+                background-color: $bbva-100;
+                border-radius: 50%;
+                border: 1px solid #666666;
+                cursor: pointer;
+                position: relative;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-align-items: center;
+                align-items: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+
+                &:hover {
+                    box-shadow: 0px 0px 5px 0px $bbva-dark-medium-blue;
+                }
+
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 9px;
+                    height: 9px;
+                    border-radius: 50%;
+                }
+            }
+
+            .radio.checked:after {
+                background-color: $bbva-core-blue;
+            }
+        }
+        .radio-label {
+            line-height: 1.7;
+            margin-left: 0.5rem;
+            display: inline;
+        }
+
+        &.disabled {
+            .radio {
+                background-color: $bbva-300;
+                cursor: auto;
+
+                &:hover {
+                    box-shadow: 0px 0px 5px 0px $bbva-500;
+                }
+
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 9px;
+                    height: 9px;
+                    border-radius: 50%;
+                    ;
+                }
+            }
+
+            .radio.checked:after {
+                background-color: $bbva-500
+            }
+        }
+    }
+
+    .i-message{
+        min-height: 32px;
+        max-height: 32px;
+    }
+
+    &.hasError {
+        .i-message {
+            .bbva-icon {
+                font-size: 16px;
+                color: $bbva-dark-red;
+                float: left;
+            }
+        }
+
+        .radio-label {
+            color: $bbva-dark-red;
+        }
+
+        .radio-buttons {
+            .ckeck-area {
+                .radio {
+                    border: 1px solid $bbva-dark-red;
+                    background-color: $bbva-white-red;
+                }
+            }
+        }
+
+        .text-message {
+            font-size: 12px;
+            vertical-align: sub;
+        }
+    }
+}
+
+.fixed-radiosel{
+    height: 145px !important;
+    .radio-buttons{
+        padding-bottom: 48px;
+    }
+}
+.fixed-radio{
+    padding-bottom: 48px !important;
+}

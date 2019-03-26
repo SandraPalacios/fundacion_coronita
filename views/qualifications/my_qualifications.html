@@ -1,0 +1,40 @@
+<!--Template principal de la pesta&ntilde;a Mis Calificaciones.-->
+
+    <div class="title-b">
+        Calificaciones
+    </div>
+    <div class="radio-tab">
+        <label data-index="0" class="active">
+            <span class="tab-content">
+                <span class="label">
+                    Secundaria
+                </span>
+            </span>
+        </label>
+        <label data-index="1">
+            <span class="tab-content">
+                <span class="label">
+                    Preparatoria
+                </span>
+            </span>
+        </label>
+        <label data-index="2">
+            <span class="tab-content">
+                <span class="label">
+                    Universidad
+                </span>
+            </span>
+        </label>
+        <div id="indicator" class="three"></div>
+    </div>
+    <div>
+        {{#contentTabs}}
+        <div id="wf{{index}}" class="i-form {{opened}}" style="display: {{isView}}">
+            <form name="{{scholarLevel}}" action="#" class="form-gray" method="post" target="_top" id="form{{scholarLevel}}">
+                <div class="grid-item score-tabs-in" id="calificacion{{scholarLevel}}" data-calificaciones="{{scholarLevel}}">
+                    <div class="lastLevel" data-level="{{lastLevel}}"></div>
+                </div>
+            </form>
+        </div>
+        {{/contentTabs}}
+    </div>

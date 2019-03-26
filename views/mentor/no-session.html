@@ -1,0 +1,39 @@
+<br>
+<div class="subtitle-sec">&#191;Por qu&eacute; no se realiz&oacute; la sesi&oacute;n&#63;</div>
+<form name="nsession" action="#" class="form-gray notify-on-error" method="post" target="_top" id="formnsession">
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="form-group-select whitwait required" id="reason">
+                <div class="option-select">
+                    <div class="select-title sl">
+                        <span class="option-text sl center">Motivo</span>
+                        <span class="selected-option sl"></span>
+                        <i class="bbva-icon ui-simple-down sl"></i>
+                    </div>
+                    <div class="list-result"></div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="form-validation-group">
+                <div class="form-group">
+                    <textarea class="form-control" name="comments" id="comments" type="text" data-placeholder="Comentarios"
+                        autocomplete="off" required>{{comments}}</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item" hidden>
+            <div class="form-validation-group">
+                <div class="form-group">
+                    <input class="form-control" name="session" id="session" type="text" data-placeholder="session"
+                        autocomplete="off" value="{{id}}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="submtbtn">
+        <span title="Continuar" aria-label="Continuar" class="btn__basic btn__submit" id="btn_save_eval_n" data-session="{{id}}">
+            <span aria-hidden="true">Enviar</span>
+        </span>
+    </div>
+</form>

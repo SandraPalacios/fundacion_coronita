@@ -1,0 +1,38 @@
+.footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    background-color: $bbva-navy;
+    padding: 28px 0;
+    .container{
+        @include to(l){
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        .footer-logo {
+            width: 100%;
+            height: 32px;
+            display: block;
+            img {
+                max-width: 168px;
+                width: initial;
+            }
+        }
+        .footer-copyright {
+            font-family: "BentonSansBBVA-Book", Helvetica, Arial, sans-serif;
+            font-size: 12px;
+            color: $bbva-600;
+            text-align: left;
+            letter-spacing: 0;
+            line-height: 16px;
+            margin-top: 16px;
+            color: #bdbdbd;
+            @include to(l){
+                text-align: center;
+                padding: 8px 32px 24px;
+            }
+        }
+    }
+}
