@@ -50,6 +50,9 @@ input:invalid {
     padding-top: 10px;
     padding-bottom: 180px; //for footer
     background-size: cover;
+    &.onboarding{
+        background-color: $bbva-white;
+    }
     @include to(m){
         padding-bottom: 224px;
     }
@@ -1166,6 +1169,13 @@ input:invalid {
     text-align: center;
     margin-bottom: 12px;
 
+    &.onboarding{
+        text-align: right;
+        @include to (m) {
+            text-align: center;
+        }
+    }
+
     &.sub_fb {
         margin-bottom: 32px;
     }
@@ -2251,6 +2261,11 @@ a.link {
     font-weight: 700;
     padding-top: 5px;
     padding: 10px 0px;
+    &.onboarding{
+        font-size: x-large;
+        height: 40px;
+        font-weight: bold;
+    }
 }
 
 .all-table {
@@ -2271,4 +2286,41 @@ a.link {
 .responsivity-visor{
     width: -webkit-fill-available;
     height: -webkit-fill-available;
+}
+
+section{
+    .alert{
+        margin-left: auto;
+        font-family: "BentonSansBBVA-BookItalic", Helvetica, Arial, sans-serif !important;
+    }
+    p{
+        display: -webkit-box;
+        padding-right: 150px;
+        text-align: justify;
+        &.pr-auto{
+            padding-right: 20px;
+        }
+        @include to (m) {
+            padding-right: 0px;
+        }
+        
+    }
+    p.t-auto{
+        text-align: -webkit-auto;
+        margin-bottom: 15px;
+    }
+    img{
+        width: 35%;
+        float: right;
+        @include to (m) {
+            width: 80%;
+            float: inherit;
+        }
+    }
+    .content-bienvenido{
+        height: 400px;
+        @include to (m) {
+            height: auto;
+        }
+    }
 }

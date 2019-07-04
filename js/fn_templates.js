@@ -189,6 +189,24 @@ var fn_cards_qualifications = function name(params) {
 
 };
 
+var fn_bienvenido = function (){
+    $(".btn_acept").click(function () {
+        loadTemplate($("#template_onboarding"), templates.avisosLegales, {});
+    });
+};
+
+var fn_avisosLegales = function(){
+    $(".btn_acept").click(function () {
+        loadTemplate($("#template_onboarding"), templates.avisosLegales_final, {});
+    });
+
+    $(".btn_finalizar").click(function () {
+        console.log("Finalizar");
+        servOrigin = window.location.origin;
+        window.location.href=servOrigin+"/index_becario.html";
+    });
+};
+
 var fn_confirmModal = function (_temp, data) {
     console.log(data);
     fn_showModal();

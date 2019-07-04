@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Becas Fundaci&oacute;n BBVA Bancomer</title>
+    <link rel="stylesheet" href="css/bbva.fonts.css">
+    <!--<link rel="stylesheet" href="css/bbva.fonts.lc-20181122-161007-lc.css">-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicons/144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/180x180.png">
+    <link rel="icon" href="images/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/192x192.png">
+    <script src="js/animations.js"></script>
+    <script src="scripts/jquery-2.1.1.min.js"></script>
+    <script src="scripts/mustache.js"></script>
+    <script src="scripts/popper.min.js"></script>
+    <script src="scripts/tooltip.min.js"></script>
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="header">
+            <div class="header_container container flex-items">
+                <div class="header_logo">
+                    <a href="#" class="header__logo__link">
+                        <img src="images/logo.png" class="header_image" alt="">
+                    </a>
+                </div>
+                <div class="menu">
+                    <div class="btn-menu flex-items" id="btn-exit">
+                        <img src="./images/icons/get-out-icon.svg" alt=""> &nbsp; Cerrar sesi&oacute;n
+                    </div>
+                    <div class="btn-menu flex-items" id="btn-principal-menu">
+                        Men&uacute; &nbsp; <img src="./images/icons/menu-icon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="show-menu" class="flex-items" style="display:none">
+                <div class="opacity"></div>
+                <div id="menu-options">
+                    <div class="title-section-menu">M&oacute;dulos</div>
+                    <div class="btn-menu-options" id="btn-home">Inicio</div>
+                    <div class="btn-menu-options" id="btn-scholarship">Mi beca</div>
+                    <div class="btn-menu-options" id="btn-qualification">Mis calificaciones</div>
+                    <div class="btn-menu-options" id="btn-pdata">Mis datos</div>
+                    <div class="btn-menu-options" id="btn-mentor">Mi mentor</div>
+                    <div class="separator"></div>
+                    <div class="btn-menu-services" id="btn-open-call"> <i class="bbva-icon ui-bonus-accounts"></i>
+                        Convocatoria</div>
+                    <!--<div class="btn-menu-services" id="btn-help"> <i class="bbva-icon ui-help"></i> Ayuda</div>-->
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container">
+                <div id="scholarheader"></div>
+                <div id="principalTemplate">
+                </div>
+            </div>
+        </div>
+        <div class="help-menu">
+            <div class="btn_help" id="call_h">
+                <i class="bbva-icon ui-telephone helpicon"></i>
+                <div class="helpname">Llamar</div>
+            </div>
+            <div class="btn_help" id="email_h">
+                <i class="bbva-icon ui-email helpicon"></i>
+                <div class="helpname">Correo</div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-logo">
+                    <img src="images/LogoBBVAOportunidades@2x.png">
+                </div>
+                <p class="footer-copyright">
+                    &#169; 2018 BBVA Bancomer, S. A., Instituci&oacute;n de Banca M&uacute;ltiple, Grupo Financiero BBVA
+                    Bancomer.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="waitmodal outer" style="display: none;" id="waitmodal">
+        <div class="middle">
+            <div class="inner">
+                <div class="spinner">
+                    <figure>
+                        <div class="stripe stripe--item-1"></div>
+                        <div class="stripe stripe--item-2">
+                            <div class="stripe stripe--item-3"></div>
+                        </div>
+                        <div class="stripe stripe--item-4">
+                            <div class="stripe stripe--item-5"></div>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal_generic" close-icon>
+        <div id="dialog" class="md-modal md-effect" tabindex="-1">
+            <div class="md-wrapper ">
+                <span id="btn-close" class="md-content__btn-close" aria-label="Cancel">
+                    <i class="bbva-icon ui-x icon-close"></i>
+                </span>
+                <div id="content" class="md-content">
+                    <div class="body" id="ariaText1b">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="md-overlay" aria-hidden="true"></div>
+    </div>
+    <div class="modal" id="modal_generic2" close-icon>
+        <div id="dialog" class="md-modal md-effect" tabindex="-1">
+            <div class="md-wrapper ">
+                <div id="content" class="md-content">
+                    <div class="body" id="ariaText1b">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="md-overlay" aria-hidden="true"></div>
+    </div>
+    <script src="js/context.js"></script>
+    <script src="js/global.fun.js"></script>
+    <script src="js/services.local.conf.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/fn_templates.js"></script>
+    <script src="js/templates.js"></script>
+    <script src="plugins/radiotab.js"></script>
+    <script src="scripts/browser_detect.js"></script>
+    <script src="scripts/mask.js"></script>
+    <script src="plugins/input_text.js"></script>
+    <script src="plugins/combo_select.js"></script>
+    <script src="plugins/radiobutton.js"></script>
+    <script src="plugins/checkbox.js"></script>
+    <script src="js/states.js"></script>
+    <script src="js/municipalities.js"></script>
+    <script src="js/dates.js"></script>
+    <script src="js/validations.js"></script>
+    <script src="scripts/dropzone.js"></script>
+    <script src="js/grades.js"></script>
+    <script src="js/combo_opc.js"></script>
+
+    <script>
+        showWait();
+        setTimeout(() => {
+            hideWait();
+            //loadTemplate($("#modal_generic2 .body"), templates.legalData, {});
+            loadTemplate($("#principalTemplate"), templates.home, {});
+        }, 1000);
+
+        var fn_loadHeader = function () {
+            ini = scholar.personalData.name.charAt(0) + scholar.personalData.lastName.charAt(0);
+            ini = ini.toUpperCase();
+            loadTemplate($("#scholarheader"), miniTemplates.scholarHeader, {
+                scholarName: scholar.personalData.name,
+                schoolGrade: scholar.statusQualifications.schoolGrade,
+                program: scholar.scholarship.programName,
+                initials_name: ini
+            });
+        }
+
+        var fn_loadProfilePicture = function () {
+            if (scholar.personalData.base64ProfilePicture) {
+                $('[data-target="#uploadScholarImage"]').css({
+                    "background-image": "url(" + scholar.personalData.base64ProfilePicture + ")",
+                    "background-size": "cover",
+                    "background-position-x": "center"
+                });
+                $("#profile-pic").html("");
+            }
+        }
+
+        var fn_showAlerts = function () {
+            if (scholar.alerts.length != 0) {
+                if (scholar.alerts.length == 1) {
+                    console.log("Sólo trae una alerta");
+                    loadTemplate($("#alertMessage"), miniTemplates.oneAlert, scholar.alerts[0]);
+                } else {
+                    loadTemplate($("#alertMessage"), miniTemplates.multipleAlerts, {
+                        alerts: scholar.alerts
+                    });
+                }
+            }
+        }
+        fn_loadHeader();
+        fn_loadProfilePicture();
+        fn_showAlerts();
+
+        /*MODAL*/
+        $(".modal .icon-close").click(function () {
+            $(this).parents(".modal").removeAttr("open");
+        });
+    </script>
+</body>
+
+</html>

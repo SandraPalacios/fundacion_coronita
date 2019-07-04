@@ -29,7 +29,9 @@
 
     .header_logo {
         width: 70%;
-
+        &.onboarding{
+            margin: auto;
+        }
         @include to(1201px) {
             width: 65%;
         }
@@ -48,14 +50,24 @@
 
         @include to(525px) {
             width: 35%;
+            &.onboarding{
+                width: 65%;
+            }
         }
 
         .header__logo__link {
             display: table-cell;
             vertical-align: middle;
             text-align: left;
-
+            &.onboarding{
+                color: white;
+            }
             img {
+                &.bienvenido{
+                    max-height: 50px;
+                    vertical-align: bottom;
+                    float: inherit;                    
+                }
                 max-height: 75px;
                 @include allanimation();
 
@@ -64,6 +76,39 @@
                     margin-left: 24px;
                 }
             }
+        }
+    }
+    .header_onboarding{
+        width: 30%;
+        color: white;
+        text-align: -webkit-right;
+        margin: auto;
+        margin-right: 10px;
+        @include to(1201px) {
+            width: 35%;
+        }
+
+        @include to(838px) {
+            width: 40%;
+        }
+
+        @include to(715px) {
+            width: 55%;
+        }
+
+        @include to(630px) {
+            width: 45%;
+        }
+
+        @include to(525px) {
+            width: 35%;
+        }        
+    }
+
+    .header_icon_ionboarding{
+        background: cadetblue;
+        @include to (m) {
+            background: url();
         }
     }
 

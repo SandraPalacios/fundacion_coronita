@@ -88,6 +88,17 @@
     cursor: pointer;
 }
 
+.md-onboarding_btn-close{
+    z-index: 100;
+    position: initial;
+    left: 1em;
+    top: 1.25em;
+}
+.md-onboarding_btn-close .icon-close {
+    color: $bbva-white;
+    cursor: pointer;
+    font-size: 20px;
+}
 .modal[close-icon] .md-content {
     padding: 4.75em 1em 3.875em;
 }

@@ -141,6 +141,18 @@ var templates = {
     "qLastLevelView": {
         path: "./views/qualifications/last_level_view.html",
         onload: fn_cards_qualifications
+    },
+    "bienvenido":{
+        path: "./views/bienvenida/bienvenida.html",
+        onload: fn_bienvenido
+    },
+    "avisosLegales":{
+        path: "./views/bienvenida/avisos_legales.html",
+        onload: fn_avisosLegales
+    },
+    "avisosLegales_final":{
+        path: "./views/bienvenida/avisos_legales_fin.html",
+        onload: fn_avisosLegales
     }
 };
 
