@@ -203,7 +203,7 @@ var fn_avisosLegales = function(){
     $(".btn_finalizar").click(function () {
         console.log("Finalizar");
         servOrigin = window.location.origin;
-        window.location.href=servOrigin+"/index_becario.html";
+        window.location.href=servOrigin+"/SandraPalacios/fundacion_coronita/master/index_becario.html";
     });
 };
 
