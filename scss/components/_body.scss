@@ -1937,11 +1937,13 @@ b {
 //Cards Para calificaciones
 .cards {
     background: #FFFFFF;
-    //border: 1px solid #BDBDBD;
     border-radius: 1px;
     margin: 5px;
     margin-bottom: 25px;
-
+    &.left{
+        margin-right: 10px;
+        margin-top: -5px;
+    }
     &.qualif{
         margin: 15px 0px!important;
     }
@@ -2286,6 +2288,22 @@ a.link {
 .responsivity-visor{
     width: -webkit-fill-available;
     height: -webkit-fill-available;
+}
+
+.link-text {
+	font-family: "BentonSansBBVA-Medium", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	color: #1d73b2;
+	text-align: left;
+	letter-spacing: 0;
+    line-height: 16px;
+    cursor: pointer;
+}
+
+.link-text:hover,
+.link-text:focus {
+	color: #1464a5;
+	text-decoration: none
 }
 
 section{
