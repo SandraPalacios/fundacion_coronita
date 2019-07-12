@@ -65,8 +65,8 @@
             img {
                 &.bienvenido{
                     max-height: 50px;
-                    vertical-align: bottom;
-                    float: inherit;                    
+                    vertical-align: middle; 
+                    margin-bottom: 5px                                
                 }
                 max-height: 75px;
                 @include allanimation();
@@ -214,6 +214,9 @@
                 @media (min-width: 992px) {
                     max-height: 34px;
                     min-height: 34px;
+                    &.bienvenido{
+                        max-height: 34px;                                                  
+                    }
                 }
             }
         }
