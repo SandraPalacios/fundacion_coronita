@@ -40,10 +40,10 @@
                     </a>
                 </div>
                 <div class="header_onboarding">
-                    <label class="onboarding">Onboarding</label>                    
+                    <label class="onboarding" id="txtOnboarding">Onboarding</label>                    
                 </div>
                 <div class="header_icon_ionboarding">
-                    <span id="btn-close" class="md-onboarding_btn-close" aria-label="Cancel">
+                    <span id="btnOnboarding" class="md-onboarding_btn-close" aria-label="Cancel">
                         <i class="bbva-icon ui-x icon-close"></i>
                 </span>
                 </div>                
@@ -131,5 +131,10 @@
 </body>
 <script>
 loadTemplate($("#template_onboarding"), templates.bienvenido, {});
+$(".header_icon_ionboarding #btnOnboarding").click(function () {    
+    $("#txtOnboarding").hide();
+    $("#btnOnboarding").hide();
+    loadTemplate($("#template_onboarding"), templates.declinar_aviso, {});
+});
 </script>
 </html>

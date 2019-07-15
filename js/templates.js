@@ -153,6 +153,10 @@ var templates = {
     "avisosLegales_final":{
         path: "./views/bienvenida/avisos_legales_fin.html",
         onload: fn_avisosLegales
+    },
+    "declinar_aviso":{
+        path: "./views/bienvenida/declinar_aviso.html",
+        onload: fn_declinarLegales
     }
 };
 

@@ -2329,9 +2329,22 @@ section{
         text-align: -webkit-auto;
         margin-bottom: 15px;
     }
+    p.t-center{
+        padding-right: inherit;
+        text-align: center;
+        display: block;        
+    }
+    p.c-bold{
+        font-weight: bold;
+    }
     img{
         width: 35%;
         float: right;
+        &.center{
+            margin: auto;
+            width: 50%;
+            float: initial;
+        }
         @include to (m) {
             width: 80%;
             float: inherit;

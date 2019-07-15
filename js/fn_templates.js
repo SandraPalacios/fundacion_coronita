@@ -212,6 +212,17 @@ var fn_avisosLegales = function(){
     });
 };
 
+var fn_declinarLegales = function (){   
+    $("#continuar").click(function () {
+        console.log("Volver");
+        loadTemplate($("#template_onboarding"), templates.bienvenido, {});
+        $("#txtOnboarding").show();
+        $("#btnOnboarding").show();
+    });
+    $("#ncontinuar").click(function () {
+        console.log("Declinar Aviso");
+    });
+};
 var fn_confirmModal = function (_temp, data) {
     console.log(data);
     fn_showModal();
