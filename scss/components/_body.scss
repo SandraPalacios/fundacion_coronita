@@ -2357,3 +2357,10 @@ section{
         }
     }
 }
+
+.i-range{
+    clip-path: polygon(0 0, 100% 0%, 98% 100%, 0 100%);
+    width: 25%;
+    background: #5AC4C4;
+    height: inherit;
+}
