@@ -54,7 +54,7 @@ input:invalid {
         background-color: $bbva-white;
     }
     @include to(m){
-        padding-bottom: 224px;
+        padding-bottom: 390px;
     }
     .container {
         @media (max-width: 992px) and (min-width: 0) {
@@ -2265,7 +2265,7 @@ a.link {
     padding: 10px 0px;
     &.onboarding{
         font-size: x-large;
-        height: 40px;
+        height: 60px;
         font-weight: bold;
     }
 }
@@ -2346,8 +2346,9 @@ section{
             float: initial;
         }
         @include to (m) {
-            width: 80%;
+            width: 50%;
             float: inherit;
+            margin: auto;
         }
     }
     .content-bienvenido{

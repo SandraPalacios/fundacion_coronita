@@ -87,6 +87,18 @@
     transition: all 0.3s;
 }
 
+.md-onboarding_btn-close{
+    z-index: 100;
+    position: initial;
+    left: 1em;
+    top: 1.25em;
+}
+.md-onboarding_btn-close .icon-close {
+    color: $bbva-white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
 .modal[open]>.md-overlay {
     opacity: 0.6;
     visibility: visible;
