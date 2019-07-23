@@ -1,231 +1,259 @@
 @mixin allanimation {
-    -webkit-transition: all .33333s;
+  -webkit-transition: all .33333s;
     transition: all .33333s;
 }
-
 .header {
-    background-color: $bbva-navy;
-    position: relative;
-    z-index: 8;
+  background-color: $bbva-navy;
+  position: relative;
+  z-index: 8;
 
-    .container {
-        padding-top: 5px;
+  .container {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .header__image {
+    display: inline;
+    max-height: 20px;
+    min-height: 20px;
+    max-width: 262px;
+    @include allanimation();
+    @media (max-width: 991px) and (min-width: 0) {
+        height: 18px;
+        max-height: 18px;
+        min-height: 18px;
+        max-width: 176px;
+    }
+  }
+
+  .header__logo__link {
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+    img {
+      max-height: 75px;
+      @include allanimation();
+      @media (max-width: 990px) {
+        max-width: 100px;
+        margin-left: 24px;
+      }
+    }
+  }
+
+  .header_logo {
+    width: 70%;
+    &.onboarding{
+      margin: auto;
+    }
+    @include to(1201px) {
+        width: 65%;
     }
 
-    .header__image {
-        display: inline;
-        max-height: 20px;
-        min-height: 20px;
-        max-width: 262px;
-        @include allanimation();
-
-        @media (max-width: 991px) and (min-width: 0) {
-            height: 18px;
-            max-height: 18px;
-            min-height: 18px;
-            max-width: 176px;
-        }
+    @include to(838px) {
+        width: 60%;
     }
 
-    .header_logo {
-        width: 70%;
+    @include to(715px) {
+        width: 55%;
+    }
+
+    @include to(630px) {
+        width: 45%;
+    }
+
+    @include to(525px) {
+        width: 35%;
         &.onboarding{
-            margin: auto;
-        }
-        @include to(1201px) {
             width: 65%;
         }
+    }
 
-        @include to(838px) {
-            width: 60%;
-        }
+    .header__logo__link {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: left;
+        &.onboarding{
+            color: white;
+		      }
+        img {
+            &.bienvenido{
+                max-height: 50px;
+                vertical-align: middle; 
+                margin-bottom: 5px                                
+            }
+            max-height: 75px;
+            @include allanimation();
 
-        @include to(715px) {
-            width: 55%;
-        }
-
-        @include to(630px) {
-            width: 45%;
-        }
-
-        @include to(525px) {
-            width: 35%;
-            &.onboarding{
-                width: 65%;
+            @media (max-width: 990px) {
+                max-width: 100px;
+                margin-left: 24px;
             }
         }
+    }
+  }
+  .header_onboarding{
+    width: 30%;
+    color: white;
+    text-align: right;
+    margin: auto;
+    margin-right: 10px;
+    @include to(1201px) {
+        width: 35%;
+    }
 
-        .header__logo__link {
-            display: table-cell;
-            vertical-align: middle;
-            text-align: left;
-            &.onboarding{
-                color: white;
-            }
+    @include to(838px) {
+        width: 40%;
+    }
+
+    @include to(715px) {
+        width: 55%;
+    }
+
+    @include to(630px) {
+        width: 45%;
+    }
+
+    @include to(525px) {
+        width: 35%;
+    }        
+  }
+  .header_icon_ionboarding{
+    background: cadetblue;
+    @include to (m) {
+        background: url();
+    } 
+  }
+  .menu {
+    @include grid ('.btn-menu', 2);
+    //grid-gap: 0 !important;
+    width: 30%;
+    margin-left: 2% !important;
+    font-family: "BentonSansBBVA-Medium", sans-serif !important;
+
+    @include to(1201px) {
+        width: 35%;
+    }
+
+    @include to(838px) {
+        width: 40%;
+
+        .btn-menu {
+            font-size: 15px;
+
             img {
-                &.bienvenido{
-                    max-height: 50px;
-                    vertical-align: middle; 
-                    margin-bottom: 5px                                
-                }
-                max-height: 75px;
-                @include allanimation();
-
-                @media (max-width: 990px) {
-                    max-width: 100px;
-                    margin-left: 24px;
-                }
+                height: 20px;
             }
-        }
-    }
-    .header_onboarding{
-        width: 30%;
-        color: white;
-        text-align: right;
-        margin: auto;
-        margin-right: 10px;
-        @include to(1201px) {
-            width: 35%;
-        }
 
-        @include to(838px) {
-            width: 40%;
-        }
-
-        @include to(715px) {
-            width: 55%;
-        }
-
-        @include to(630px) {
-            width: 45%;
-        }
-
-        @include to(525px) {
-            width: 35%;
-        }        
-    }
-
-    .header_icon_ionboarding{
-        background: cadetblue;
-        @include to (m) {
-            background: url();
-        }
-    }
-
-    .menu {
-        @include grid ('.btn-menu', 2);
-        //grid-gap: 0 !important;
-        width: 30%;
-        margin-left: 2% !important;
-        font-family: "BentonSansBBVA-Medium", sans-serif !important;
-
-        @include to(1201px) {
-            width: 35%;
-        }
-
-        @include to(838px) {
-            width: 40%;
-
-            .btn-menu {
-                font-size: 15px;
-
-                img {
-                    height: 20px;
-                }
-
-                &#btn-principal-menu {
-                    img {
-                        height: 15px;
-                    }
-                }
-            }
-        }
-
-        @include to(715px) {
-            width: 45%;
-        }
-
-        @include to(630px) {
-            width: 55%;
-        }
-
-        @include to(525px) {
-            width: 60%;
-
-            .btn-menu {
-                font-size: 12px !important;
-
+            &#btn-principal-menu {
                 img {
                     height: 15px;
                 }
-
-                .bbva-icon {
-                    font-size: 18px;
-                }
-
-                &#btn-principal-menu {
-                    img {
-                        height: 10px;
-                        margin: auto 0px;
-                    }
-                }
             }
         }
+    }
+
+    @include to(715px) {
+        width: 45%;
+    }
+
+    @include to(630px) {
+        width: 55%;
+    }
+
+    @include to(525px) {
+        width: 60%;
 
         .btn-menu {
-            text-align: center;
-            width: 100%;
-            color: $bbva-white;
-            font-size: 16px;
-            font-weight: normal;
-            padding-top: 20px;
-            margin: auto 0px;
+            font-size: 12px !important;
 
-            @include to(991px) {
-                padding-top: 0px;
-            }
-
-            &:hover {
-                cursor: pointer;
-            }
-
-            &#btn-exit {
-                color: $bbva-yellow;
+            img {
+                height: 15px;
             }
 
             .bbva-icon {
-                font-size: 22px;
-                vertical-align: baseline;
+                font-size: 18px;
             }
-        }
-    }
 
-    &.sticky {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        @media (min-width: 992px) {
-            min-height: 48px;
-            max-height: 48px;
-        }
-
-        .header__logo__link {
-            img {
-                @media (min-width: 992px) {
-                    max-height: 34px;
-                    min-height: 34px;
-                    &.bienvenido{
-                        max-height: 34px;                                                  
-                    }
+            &#btn-principal-menu {
+                img {
+                    height: 10px;
+                    margin: auto 0px;
                 }
             }
         }
+    }
 
-        .menu {
-            .btn-menu {
-                font-size: 12px !important;
-                padding-top: 0px;
-            }
+    .btn-menu {
+        text-align: center;
+        width: 100%;
+        color: $bbva-white;
+        font-size: 16px;
+        font-weight: normal;
+        padding-top: 20px;
+        margin: auto 0px;
+
+        @include to(991px) {
+            padding-top: 0px;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &#btn-exit {
+            color: $bbva-yellow;
+        }
+
+        .bbva-icon {
+            font-size: 22px;
+            vertical-align: baseline;
         }
     }
+}
+  &.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    @media (min-width: 992px){
+          min-height: 48px;
+          max-height: 48px;
+    }
+    .header__logo__link img{
+      @media (min-width: 992px){
+        max-height: 34px;
+        min-height: 34px;
+        &.bienvenido{
+          max-height: 34px;                                                  
+        }
+      }
+    }
+    .menu {
+      .btn-menu {
+          font-size: 12px !important;
+          padding-top: 0px;
+      }
+    }
+  }
+}
+
+.subheader {
+  background-color: $bbva-core-blue;
+  color: $bbva-light-blue;
+  padding: 1.7334rem 2rem;
+  line-height: 24px;
+  font-size: 17px;
+  text-align: left;
+  @media (max-width: 990px) {
+    padding: 0.7334rem 2rem;
+    text-align: center;
+  }
+}
+.sticky + .subheader {
+  @include from(m){
+    padding-top: 92px;
+  }
+  @include to(m){
+    padding-top: 40px;
+  }
 }
