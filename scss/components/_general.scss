@@ -46,6 +46,9 @@ div {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+
   position: relative;
   box-sizing: border-box;
   font-family: "BentonSansBBVA-Book", Helvetica, Arial, sans-serif;
@@ -54,15 +57,14 @@ div {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
   border-radius: 1px;
   padding: 1rem 1.25rem 0;
-
-  &.accordeon{
-    padding: 0 1.25rem 1.25rem;
-  }
   @include to(m){
     padding: 0px;
   }
   &.gray{
     background-color: $bbva-100;
+  }
+  &.accordeon{
+    padding: 0 1.25rem 1.25rem;
   }
 }
 
