@@ -6,7 +6,7 @@
     width: 70px;
     height: 140px;
     border: none;
-    z-index: 1;
+
     .btn_help {
         width: 70px;
         height: 70px;
@@ -45,7 +45,6 @@
     line-height: 11px;
     color: $bbva-600;
     min-width: 180.5px;
-    max-width: 180.5px;
     &:last-of-type {
         margin-bottom: 32px;
     }
@@ -76,8 +75,5 @@ body.mobile {
                 color: $bbva-white;
             }
         }
-    }
-    .footer{
-        margin-bottom: 45px;
     }
 }
