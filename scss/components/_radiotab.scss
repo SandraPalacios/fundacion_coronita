@@ -11,9 +11,7 @@
     background-color: $bbva-white;
     box-sizing: border-box;
     font-weight: normal;
-    @include to(m){
-        font-size: 15px;
-    }
+
     label {
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -60,9 +58,5 @@
         transition: transform 0.2s;
         transition: transform 0.2s, -webkit-transform 0.2s;
         background-color: $bbva-600;
-        
-        &.three{
-            width: calc(100% / 3);
-        }
     }
   }
