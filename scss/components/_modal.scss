@@ -12,7 +12,34 @@
     position: fixed;
     top: 0;
     font-family: "BentonSansBBVA-Book", Helvetica, Arial, sans-serif;
-    z-index: 9;
+    z-index: 8;
+    &#modal_timeout{
+        z-index: 9;
+        #cdSession{
+            font-size: 25px;
+            padding-bottom: 19px;
+        }
+    }
+    .grid-container{
+        @include grid('.grid-item', 1 2);
+      }
+      .step-container {
+        @include from(l){
+          padding: 1.875rem 5px;
+        }
+      }
+      .list-member {
+        text-align: left;
+        @include from(m){
+          padding: 0 30%;
+        }
+      }
+      .submtbtn{
+        text-align: center !important;
+        &.right {
+          text-align: right !important;
+        }
+      }
 }
 
 .modal[hidden],
@@ -33,6 +60,7 @@
     backface-visibility: hidden;
     opacity: 0;
     transition: visibility 0.3s, opacity 0.3s;
+    overflow: auto;
 }
 
 .modal[open]>.md-modal {
@@ -88,17 +116,6 @@
     cursor: pointer;
 }
 
-.md-onboarding_btn-close{
-    z-index: 100;
-    position: initial;
-    left: 1em;
-    top: 1.25em;
-}
-.md-onboarding_btn-close .icon-close {
-    color: $bbva-white;
-    cursor: pointer;
-    font-size: 20px;
-}
 .modal[close-icon] .md-content {
     padding: 4.75em 1em 3.875em;
 }
