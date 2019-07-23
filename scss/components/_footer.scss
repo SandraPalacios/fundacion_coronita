@@ -1,25 +1,37 @@
-.footer{
-    position:absolute;
-    bottom:0;
-    width:100%;
+body.mobile {
+    .content{
+        padding-bottom: 418px !important;
+    }
+    .footer{
+        margin-bottom: 45px;
+    }
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: $bbva-navy;
     padding: 28px 0;
-    .container{
-        @include to(l){
+
+    .container {
+        @include to(l) {
             max-width: 100%;
             margin-left: auto;
             margin-right: auto;
             text-align: center;
         }
+
         .footer-logo {
             width: 100%;
-            height: 32px;
+            height: 43px;
             display: block;
+
             img {
                 max-width: 168px;
                 width: initial;
             }
         }
+
         .footer-copyright {
             font-family: "BentonSansBBVA-Book", Helvetica, Arial, sans-serif;
             font-size: 12px;
@@ -29,9 +41,101 @@
             line-height: 16px;
             margin-top: 16px;
             color: #bdbdbd;
-            @include to(l){
+
+            @include to(l) {
                 text-align: center;
                 padding: 8px 32px 24px;
+            }
+        }
+
+        .footer__links {
+            margin-bottom: 40px;
+            @include from(l) {
+                width:100%;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: start;
+                -ms-flex-align: start;
+                align-items: flex-start
+            }
+
+            .footer__list{
+                text-align: center;
+                margin-top: 40px;
+
+                @media (min-width: 600px) {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    margin: auto;
+                }
+                
+                @include from(l) {
+                    max-width:70%;
+                    -webkit-box-pack: start;
+                    -ms-flex-pack: start;
+                    justify-content: flex-start;
+                    margin: 0 32px 0 0;
+                }
+                .link__content {
+                    display: inline-block;
+                    @media (min-width: 992px){
+                        display:none;
+                    }
+                }
+
+                .link{
+                    position: relative;
+                    zoom:1;width: 100%;
+                    display: block;
+                    padding:8px 0;
+                    @media (min-width: 600px) {
+                        width:auto
+                    }
+                    
+                    &:before, &:after{
+                        content: ' ';
+                        display: block;
+                        height: 0;
+                        width: 0;
+                        overflow: hidden;
+                    }
+
+                    a {
+                        color: #49a5e6;
+                        padding: 8px;
+                        margin: 0;
+                        display: inline-block;
+                        text-align: center;
+                        font-family: "BentonSansBBVA-Medium",Helvetica,Arial,sans-serif;
+                        text-decoration: none;
+                        @media (min-width: 992px) {
+                            padding:8px 0;
+                            margin-right: 24px
+                        }
+                        &:hover {
+                            color: #fff
+                        }
+                    }
+                }
+                .link__content {
+                    color: #49a5e6;
+                    padding: 8px;
+                    margin: 0;
+                    &:hover {
+                        color: #fff
+                    }
+                    @media (min-width: 992px) {
+                        text-align:right;
+                        padding-right: 0;
+                    }
+                }
             }
         }
     }
