@@ -49,7 +49,7 @@
             </div>
         </div>
         <div style="background: #E9E9E9; height: 8px;">
-            <div class="i-range">&nbsp;</div>
+            <div class="i-range" data-templateA="">&nbsp;</div>
         </div>
         <div class="content onboarding">
             <div class="container">
@@ -146,6 +146,7 @@
 </body>
 <script>
 loadTemplate($("#template_onboarding"), templates.bienvenido, {});
+$('.i-range').attr("data-templateA", "bienvenido");
 $(".header_icon_ionboarding #btnOnboarding").click(function () {    
     $("#txtOnboarding").hide();
     $("#btnOnboarding").hide();

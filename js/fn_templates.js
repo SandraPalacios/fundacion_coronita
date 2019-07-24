@@ -192,12 +192,17 @@ var fn_cards_qualifications = function name(params) {
 var fn_bienvenido = function (){
     $(".btn_acept").click(function () {
         loadTemplate($("#template_onboarding"), templates.avisosLegales, {});
+        $('.i-range').css({"width":"66%"});
+        $('.i-range').attr("data-templateA", "avisosLegales");
     });
 };
 
 var fn_avisosLegales = function(){
     $(".btn_acept").click(function () {
         loadTemplate($("#template_onboarding"), templates.avisosLegales_final, {});
+        $('.i-range').css({"width":"100%"});
+        $('.i-range').css({"clip-path": "polygon(0 0, 100% 0%, 99% 100%, 0 100%)"});
+        $('.i-range').attr("data-templateA", "avisosLegales_final");
     });
 
     $(".btn_finalizar").click(function () {
@@ -214,7 +219,8 @@ var fn_avisosLegales = function(){
 
 var fn_declinarLegales = function (){   
     $("#continuar").click(function () {
-        loadTemplate($("#template_onboarding"), templates.bienvenido, {});
+       tA = $('.i-range').attr("data-templateA");
+        loadTemplate($("#template_onboarding"), templates[tA], {});
         $("#txtOnboarding").show();
         $("#btnOnboarding").show();
     });
